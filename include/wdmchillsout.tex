@@ -67,7 +67,7 @@ where $\qsub$ is a set of hyper-parameters describing the subhalo and line of si
 A certain dark matter model makes predictions for the parameters in $\qsub$, which includes quantities such as the normalization of the subhalo mass function, the logarithmic slope of the mass function, a free streaming cutoff, etc. For a given $\qsub$, we may generate specific realizations of line of sight halos and main deflector subhalos (including the halo/subhalo masses, positions, concentrations, etc.), that affect lensing observables. We refer to a specific realization of dark matter structure corresponding to a model specified by $\qsub$ as $\msub$. In addition to generating the realizations $\msub$, computing the likelihood function $\mathcal{L} \left(\data | \qsub \right)$ in Equation \ref{eqn:posterior} requires marginalizing over nuisance parameters $\qm$, which include the background source size $\sigma_{\rm{src}}$, and the lens model that describes the main lensing galaxy (hereafter the macromodel). Integrating over the macromodel and the space of possible dark matter realizations $\msub$, the likelihood is given by
 \begin{eqnarray}
 \label{eqn:likelihood}
-\mathcal{L} \left(\data| \qsub \right) = \int p \left(\data | \msub, \qm \right) p \left( \msub, \qm | \ \qsub \right) d \msub \ d \qm.
+{\mathcal{L}} \left(\data| \qsub \right) = \int p \left(\data | \msub, \qm \right) p \left( \msub, \qm | \ \qsub \right) d \msub \ d \qm.
 \end{eqnarray}
 Note that we write the joint distribution $p\left(\msub, \qmac | \qsub\right)$, and do not assume the parameters in $\qm$ and $\qsub$ are independent. 
 
@@ -91,6 +91,7 @@ Obtaining a lens model that returns the observed image positions amounts to dema
 where the quantities $D_{\rm{s}}$, $D_{\rm{k}}$ and $D_{\rm{ks}}$ denote angular diameter distances to the source plane, to the $k$th lens plane, and from the $k$th lens plane to the source plane, respectively. Equation \ref{eqn:raytracing} is a recursive equation for the $\boldsymbol{\beta_{\rm{k}}}$ that couples deflection angles from objects at different redshifts, similar to looking through potentially thousands of magnifying glasses in series. Throughout this process, we account for uncertainties in the measured image positions by sampling astrometric perturbations $\delta_{xy}$, and applying them to the observed image positions during the forward modeling.
 
 \begin{figure}
+	\centering
 	\includegraphics[clip,trim=3.5cm 4cm 2.5cm
 	4cm,width=.49\textwidth,keepaspectratio]{./figures_wdmchillsout/flowchart.pdf}
 	\caption{\label{fig:flowchart}  A graphical representation of the forward modeling procedure. Purple colors correspond to the action of sampling from a prior, blue represents an operation performed using the parameters sampled from a prior, and green colors indicate the use of observed information from the lenses. The arrow of time points from top to bottom: The first step is the rendering of dark matter structure, while the use of the information from observed flux ratios happens only at the very end.}
@@ -115,10 +116,11 @@ We select the $\qsub$ parameters corresponding to the $800$ lowest summary stati
 To obtain the final posterior distribution $p \left(\qsub | \boldsymbol{D}\right)$ (Equation \ref{eqn:posterior}), we multiply together the likelihoods obtained for each lens \footnote{Before taking the product, we use a Gaussian kernel density estimator (KDE) with a first order boundary correction \cite[e.g.][]{Lewis15} to obtain a continuous approximation of the likelihood for each lens. We compute the bandwidth according to Scott's factor \cite{Scott92}, but caution that care should be taken with the choice of bandwidth to avoid over or under smoothing the likelihood.}. This procedure is only possible when using uniform priors in the forward model sampling, as the use of non-uniform priors would effectively move $\pi \left(\qsub\right)$ inside the product in Equation \ref{eqn:posterior} and over-use this information. We may, however, impose any prior we wish a-posteriori by re-weighting the forward model samples accordingly. 
 
 \begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_wdmchillsout/subhalo_mfunc_scaling.pdf}
 	\caption{\label{fig:trends}  Output from the {\tt{galacticus}} semi-analytic simulations of substructure within halos used to calibrate the evolution of the subhalo mass function with halo mass and redshift. While on the y-axis we plot the actual projected surface mass density in substructure output by {\tt{galacticus}}, we only use the scaling with halo mass in redshift in our modeling, treating the overall normalization of the subhalo mass function as a free parameter. The projected mass density in substructure on the y-axis corresponds to a mass range $10^6 - 10^{10}\msun$, where we have extrapolated the mass function from the smallest resolved subhalo  ($10^{8}\msun$) to $10^{6}\msun$ to compute the projected mass. }
-\end{figure}	
+\end{figure}
 
 \begin{figure}
 	\includegraphics[clip,trim=0cm 0cm 0cm
@@ -126,9 +128,10 @@ To obtain the final posterior distribution $p \left(\qsub | \boldsymbol{D}\right
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_wdmchillsout/mcrelation.pdf}
 	\caption{\label{fig:mcrelation} {\bf{Top:}} The subhalo mass function as a function of halo mass, redshift, and the half-mode mass $\mhm = 10^7 \msun$ with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$. The line of sight halo mass function looks similar, but evolves differently with redshift. {\bf{Bottom:}} The mass-concentration-relation for CDM and the same WDM model with $\mhm = 10^7 \msun$. Free-streaming affects the concentration of halos over one order of magnitude above $\mhm$.}
-\end{figure}	
+\end{figure}		
 
 \begin{figure*}
+	\centering
 	\includegraphics[clip,trim=3.8cm 8cm 2.5cm
 	4cm,width=.8\textwidth,keepaspectratio]{./figures_wdmchillsout/schematic.pdf}
 	\caption{\label{fig:schematic} A graphical representation of the dark matter parameters in $\qsub$: $\alpha$, the logarithmic slope of the subhalo mass function, $\Sigma_{\rm{sub}}$, the overall scaling of the subhalo mass function, $\mhm$, the WDM half-mode mass, $\delta_{\rm{los}}$, the overall factor for the  line of sight halo mass function, and $M_{\rm{halo}}$, the main deflector's parent halo mass. $\xi_{\rm{2halo}}$ is implemented through Equation \ref{eqn:losmfunc} (see Section \ref{ssec:losmfunc}). These parameters are linked to the physical dark matter quantities they affect. From left to right: the subhalo mass function $\frac{d^2 N}{dm dA}$, the normalization $\rho_s$, scale radius $r_s$, and truncation radius $r_t$ of individual halos (see Equation \ref{eqn:massprofile}), and the line of sight halo mass function $\frac{d^2 N}{dm dV}$. The priors for each of these parameters are summarized in Table \ref{tab:lenspriors}, and discussed at length in Section \ref{sec:assumptionsandpriors}.}
@@ -159,7 +162,7 @@ We render subhalos out to a maximum projected radius $3 R_{\rm{Ein}}$ and assign
 %\begin{landscape}
 \begin{table*}
 	\centering
-	\caption{Free parameters sampled in the forward model. Notation $\mathcal{N} \left(\mu, \sigma\right)$ indicates a Gaussian prior with mean $\mu$ and variance $\sigma$, and $\mathcal{U} \left(u_1, u_2\right)$ indicates a uniform prior between $u_1$ and $u_2$. Lens-specific priors are summarized in Table \ref{tab:lenspriors}. }
+	\caption{Free parameters sampled in the forward model. Notation ${\mathcal{N}} \left(\mu, \sigma\right)$ indicates a Gaussian prior with mean $\mu$ and variance $\sigma$, and ${\mathcal{U}} \left(u_1, u_2\right)$ indicates a uniform prior between $u_1$ and $u_2$. Lens-specific priors are summarized in Table \ref{tab:lenspriors}. }
 	\label{tab:params}
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
@@ -199,9 +202,9 @@ In principle, the projected mass in subhalos near the Einstein radius can depend
 We use the functional form for the subhalo mass function
 \begin{equation}
 \label{eqn:subhalomfunc}
-\frac{d^2 N_{\rm{sub}}}{dm dA} =  \frac{\Sigma_{\rm{sub}}}{m_0} \left(\frac{m}{m_0}\right)^{\alpha} \mathcal{F} \left(M_{\rm{halo}}, z\right),
+\frac{d^2 N_{\rm{sub}}}{dm dA} =  \frac{\Sigma_{\rm{sub}}}{m_0} \left(\frac{m}{m_0}\right)^{\alpha} {\mathcal{F}} \left(M_{\rm{halo}}, z\right)
 \end{equation}
-where scaling function $\mathcal{F} \left(M_{\rm{halo}}, z\right)$ encodes the differential evolution of the projected number density with redshift and host halo mass, such that $\Sigma_{\rm{sub}}$ can be interpreted as a common parameter for all the lenses. We choose the normalization such that $\mathcal{F} \left(M_{\rm{halo}} = 10^{13} \msun, z = 0.5\right) = 1$, anchoring $\Sigma_{\rm{sub}}$ at $z=0.5$ with a halo mass of $10^{13}\msun$. We use a pivot mass $m_0 = 10^8 \msun$. We will marginalize over $\Sigma_{\rm{sub}}$ and $\alpha$ when quoting constraints on dark matter warmth to account for tidal stripping of subhalos and halo-to-halo scatter.  
+where scaling function ${\mathcal{F}} \left(M_{\rm{halo}}, z\right)$ encodes the differential evolution of the projected number density with redshift and host halo mass, such that $\Sigma_{\rm{sub}}$ can be interpreted as a common parameter for all the lenses. We choose the normalization such that $\mathcal{F} \left(M_{\rm{halo}} = 10^{13} \msun, z = 0.5\right) = 1$, anchoring $\Sigma_{\rm{sub}}$ at $z=0.5$ with a halo mass of $10^{13}\msun$. We use a pivot mass $m_0 = 10^8 \msun$. We will marginalize over $\Sigma_{\rm{sub}}$ and $\alpha$ when quoting constraints on dark matter warmth to account for tidal stripping of subhalos and halo-to-halo scatter.  
 
 To determine the scaling function $\mathcal{F} \left(M_{\rm{halo}}, z\right)$, we run a suite of simulations using the semi-analytic modeling code {\tt{galacticus}}\footnote{Code version 7175:2bd6b8d84a39} \cite{Benson12,Pullen++14}, simulating host halos and their substructure in the redshift range $0.2 < z < 0.8$ and mass range $0.8 - 3 \times 10^{13} \msun$, with a subhalo mass resolution of $10^8 \msun$. In each redshift and mass bin we simulate 24 halos, resulting in 840 halos with $M_{\rm{halo}} \sim 10^{13} \msun$ in total\footnote{The entire simulation suite using {\tt{galacticus}} completed in 1,000 CPU hours.}. We average over the projected number densities along each principle axis inside a 15 kpc aperture to obtain trends in the projected number density with host halo mass and redshift in the vicinity of the Einstein radius, where lensed images appear. The {\tt{galacticus}} simulations include tidal destruction of subhalos by the global dark matter mass profile, which affects the evolution of the projected mass density with host halo redshift: at early times, subhalos are more concentrated in the host, while at later times tidal stripping from the host depletes the population of subhalos at small radii and the projected number density near the Einstein radius decreases. In addition, the physical size of the host halo at higher redshifts is smaller by a factor of $\left(1+z\right)^{-1}$, so the number of subhalos per square physical kpc is higher. We also note that early-type galaxy host halos simulated by \cite{Fiacconi++16} also show significant evolution with redshift in the projected number density of subhalos by about a factor of two, very similar to the {\tt{galacticus}} predictions. 
 
@@ -435,9 +438,10 @@ By simultaneously sampling the lens macromodel and dark matter hyper-parameters,
 	\caption{\label{fig:mainresult} Marginal and joint posterior distributions for the dark matter hyper-parameters $\delta_{\rm{los}}$, $\alpha$, $\Sigma_{\rm{sub}}$, and $\mhm$, which represent the overall scaling of the line of sight halo mass function, the logarithmic slope of the subhalo mass function, the global normalization of the subhalo mass function that accounts for evolution with halo mass and redshfit (see Equation \ref{eqn:subhalomfunc}), and the half-mode mass $\mhm$ relevant to WDM models. Contours show $68\%$ and $95\%$ confidence intervals, while the dot-dashed lines on the marginal distributions show the $95\%$ confidence intervals.}
 \end{figure*}	
 
-\begin{wrapfigure}{l}{0.4\textwidth}
+\begin{wrapfigure}[30]{L}{0.52\textwidth}
 	\includegraphics[clip,trim=3cm 0.3cm 3cm
 	0cm,width=0.45\textwidth,keepaspectratio]{./figures_wdmchillsout/CDM_joint.pdf}
+	\captionsetup{width=.45\textwidth}
 	\caption{\label{fig:cdmsigmasub} Inference on the global normalization of the subhalo mass function $\Sigma_{\rm{sub}}$ assuming CDM, marginalized over the logarithmic slope $\alpha$ and uncertainty in the overall amplitude of the line of sight halo mass function $\delta_{\rm{los}}$. The blue dashed lines shows the mean of the marginal distribution, while black solid (dashed) lines represent $68\%$ and $95 \%$ confidence intervals. The contours in the joint distribution also represent $68\%$ and $95 \%$ confidence intervals.}
 \end{wrapfigure}	
 

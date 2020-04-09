@@ -1,0 +1,6 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {chapter}{\numberline {2}Strong lensing signatures of luminous structure and substructure in early-type galaxies}{2}
+\contentsline {chapter}{\numberline {3}Probing the nature of dark matter by forward modelling flux ratios in strong gravitational lenses}{3}
+\contentsline {chapter}{\numberline {4}Probing dark matter structure down to $10^7$ solar masses: flux ratio statistics in gravitational lenses with line of sight halos}{4}
+\contentsline {chapter}{\numberline {5}Warm dark matter chills out: constraints on the halo mass function and the free-streaming length of dark matter with 8 quadruple-image strong gravitational lenses}{5}
+\contentsline {chapter}{\numberline {6}Constraints on the mass-concentration relation of cold dark matter halos with 11 strong gravitational lenses}{6}
