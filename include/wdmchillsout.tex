@@ -438,7 +438,7 @@ By simultaneously sampling the lens macromodel and dark matter hyper-parameters,
 	\caption{\label{fig:mainresult} Marginal and joint posterior distributions for the dark matter hyper-parameters $\delta_{\rm{los}}$, $\alpha$, $\Sigma_{\rm{sub}}$, and $\mhm$, which represent the overall scaling of the line of sight halo mass function, the logarithmic slope of the subhalo mass function, the global normalization of the subhalo mass function that accounts for evolution with halo mass and redshfit (see Equation \ref{eqn:subhalomfunc}), and the half-mode mass $\mhm$ relevant to WDM models. Contours show $68\%$ and $95\%$ confidence intervals, while the dot-dashed lines on the marginal distributions show the $95\%$ confidence intervals.}
 \end{figure*}	
 
-\begin{wrapfigure}[30]{L}{0.52\textwidth}
+\begin{wrapfigure}[30]{L}{0.5\textwidth}
 	\includegraphics[clip,trim=3cm 0.3cm 3cm
 	0cm,width=0.45\textwidth,keepaspectratio]{./figures_wdmchillsout/CDM_joint.pdf}
 	\captionsetup{width=.45\textwidth}
@@ -522,7 +522,7 @@ It is possible that free-streaming effects on the halo mass function near the ha
 
 Galaxy-galaxy strong lensing provides a useful compliment to the strongest existing probe of the free-streaming length of dark matter from the Lyman-$\alpha$ forest \cite{Viel13,Irsic++17}. Our $2 \sigma$ bound on the thermal relic mass of $m_{\rm{DM}} > 5.2 \rm{keV}$ surpasses than the 3.3 keV constraint from \cite{Viel13} and matches the $5.3 \rm{keV}$ constraint from \cite{Irsic++17}, who invoked additional assumptions regarding the relevant thermodynamics. The key point of this comparison, however, is not so much which method achieves the most precision, but the fact that both methods provide stringent limits and that they are completely independent of each other in observational data and astrophysical assumptions. Independently and in combination, the results from lensing and the Lyman-$\alpha$ forest support the following statement: the halo mass function extends down in a scale-free manner to mass scales of $\sim 10^{8} \msun$, where halos are mostly, if not completely, dark. There appears to be little room left for a viable warm dark matter solution to the small-scale issues of cold dark matter. 
 
-	\section{\bf Convergence of the posterior distributions}
+	\section{\bf Appendix A: Convergence of the posterior distributions}
 \label{app:A}
 The approximation of the true posterior obtained in Approximate Bayesian Computing (ABC) algorithms converges to the true posterior distribution as the acceptance criterion becomes increasingly more stringent. In our framework, changing the acceptance criterion is equivalent to reducing the number of forward model samples while keeping the number of total accepted realizations fixed. We exploit this property to test for convergence of the posteriors. 
 
@@ -648,4 +648,7 @@ We summarize the data used in this analysis, and the references for the astromet
 		
 	\end{tabular}
 \end{table*}
+
+\bibliography{bibmaster}
+\bibliographystyle{uclathes}
 
