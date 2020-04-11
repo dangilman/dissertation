@@ -46,7 +46,7 @@ In this work, we present a statistical method that utilizes the flux ratios from
 
 We present the formalism of our method and illustrate its general capabilities via a case study in which we distinguish between two simplified dark matter models. We consider a subhalo mass function with variable normalization and damping below a free-streaming scale, and provide forecasts for the constraints afforded under different flux precisions with up to 180 systems, which is a sample size attainable with future surveys such as Euclid, LSST and WFIRST \cite{O+M10}. With our forward modeling framework, we forecast the possible constraints on a WDM subhalo mass function using flux ratios, and quantify how these constraints scale with the number of lenses, the uncertainty in fluxes, and the overall normalization of the mass function.
 
-This paper is structured as follows. Section \ref{sec:ABC} poses the problem of substructure lensing in a Bayesian framework and reviews the basics of Approximate Bayesian Computing. In section \ref{sec:sim_setup}, we describe our parameterization for the subhalo mass function, our method for creating mock data sets, and the procedure to compute posterior distributions from the forward model. In Section \ref{sec:results}, we examine how the signal from different substructure models appears surfaces as flux ratio anomalies, and provide forecasts for constraints on the half-mode mass for under various levels of precision in image flux measurements. We use a cosmology with $\Omega_m=0.3$, $\Omega_{\Lambda}=0.7$ and $h=0.7$. We use the software package {\tt{lensmodel}} to solve the lens equation and fit smooth models to lensing observables \cite{KeetonGLens2003}.
+This paper is structured as follows. Section \ref{sec:ABC} poses the problem of substructure lensing in a Bayesian framework and reviews the basics of Approximate Bayesian Computing. In section \ref{sec:sim_setup}, we describe our parameterization for the subhalo mass function, our method for creating mock data sets, and the procedure to compute posterior distributions from the forward model. In Section \ref{sec:results}, we examine how the signal from different substructure models appears surfaces as flux ratio anomalies, and provide forecasts for constraints on the half-mode mass for under various levels of precision in image flux measurements. We use a cosmology with $\Omega_m=0.3$, $\Omega_{\Lambda}=0.7$ and $h=0.7$. We use the software package {\tt{lensmodel}} to solve the lens equation and fit smooth models to lensing observables \cite{Keeton2011}.
 
 \section{Bayesian inference on the subhalo mass function}
 \label{sec:ABC}
@@ -381,7 +381,7 @@ DG, TT, and SB acknowledge support by the US National Science Foundation through
 
 %\appendix
 
-\section{\bf Appendix A: More on generating substructure realizations}
+\section{Appendix A: More on generating substructure realizations}
 \label{app:A}
 \subsection{Spatial distribution and truncation}
 As discussed in Section \ref{sec:sim_setup}, we tidally truncate the subhalos according to their 3-d position in the halo $r_{\rm{3d}}$ according to
@@ -449,7 +449,7 @@ P \propto \left(1+\frac{m_{\rm{hm}}}{m_{\rm{s}}}\right)^{-1.3}.
 \end{equation} 
 This yields substructure populations obeying the curves plotted in Figure \ref{fig:mass_function}. 
 
-\section{\bf Appendix B: Sensitivity of cusp, fold, and cross configurations}
+\section{Appendix B: Sensitivity of cusp, fold, and cross configurations}
 \label{app:B}
 The response of an image magnification to small scale structure is heightened if it lies close to a critical curve. Similarly, images close to one another may be affected by the same substructures, introducing a correlation between flux anomalies in different images. 
 
@@ -465,7 +465,7 @@ To identify image configurations, we adopt the following classification scheme b
 \end{figure} 
 
 
-\section{\bf Appendix C: Use of other summary statistics}
+\section{Appendix C: Use of other summary statistics}
 \label{app:C}
 The summary statistic in Equation \ref{eqn:summary_stat} is closely the likelihood, or a $\chi^2$ value. It penalizes models which do not reproduce the anomalies observed in the data in the correct images. There is, however, no `correct' choice of summary statistic, only ones that perform better than others.
 
@@ -485,7 +485,7 @@ Using this equation instead of Equation \ref{eqn:summary_stat}, we perform an in
 	\caption{\label{fig:other_stat} Inference made using the statistic in defined in Equation \ref{eqn:stat2}, rather than Equation \ref{eqn:summary_stat}.}
 \end{figure} 
 
-\section{\bf Appendix D: Convergence of ABC simulations and posteriors}
+\section{Appendix D: Convergence of ABC simulations and posteriors}
 \label{app:D}
 \begin{figure}
 	\centering
@@ -495,7 +495,7 @@ Using this equation instead of Equation \ref{eqn:summary_stat}, we perform an in
 \end{figure}
 To assess convergence of the ABC algorithm, we compare two inferences made on the same data set in which one has half the number of realizations as the other. To produce the black distribution, we retain the draws from $\qsub$ associated with the lowest 1,800 summary statistics. We then discard half of the realizations, and reject all but the lowest 1,800 summary statistics from the depleted simulation. Under-sampling by a factor of two, we recover the same bounds on $A_0$ and $m_{\rm{hm}}$ to a high degree of precision, indicating the inference made with $\approx 2000$ realizations per proposal $\qsub$ has converged.
 
-\section{\bf Appendix E: Fitting SIE macromodels to datasets built with non-isothermal power laws}
+\section{Appendix E: Fitting SIE macromodels to datasets built with non-isothermal power laws}
 \label{app:E}
 \begin{figure}
 	\centering

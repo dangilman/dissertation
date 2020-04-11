@@ -390,7 +390,7 @@ This work used computational and storage services associated with the Hoffman2 S
 
 %\appendix
 
-\section{\bf Appendix A: Implementing the two-halo term}
+\section{Appendix A: Implementing the two-halo term}
 \label{app:A}
 The two-halo term describes an excess of matter (relative to the mean density of the universe) near a large halo, or a peak in the density field. It is evaluated using the software package \textsc{colossus} \cite{Diemer17}, and takes the form
 \begin{eqnarray}
@@ -418,7 +418,7 @@ In Figure \ref{fig:test2halo} we plot the distribution of summary statistics $S_
 	\caption{\label{fig:test2halo} Distributions of the summary statistic $S_{\rm{smooth}}$, which represents the amount of flux ratio anomaly with respect to a smooth lens model (see the discussion in Section \ref{sec:multiplanelensing}). The grey curve is computed with the two-halo contribution, and the red curve is computed without it. Both models include only line of sight halos to isolate the contribution from $\xi_{\rm{2halo}}$. The largest difference between the curves, an offset of $4\%$, lies at $S_{\rm{smooth}} \sim 0.2$. }
 \end{figure}	
 
-\section{\bf Appendix B:The Born approximation in substructure lensing}
+\section{Appendix B:The Born approximation in substructure lensing}
 \label{app:B}
 
 The Born approximation computes the deflection at each subsequent plane along an unperturbed path. This speeds up lensing computations since a full backwards ray-tracing routine is not required. In Figure \ref{fig:bornfluxes}, we compare the distribution of flux ratio anomalies computed with respect to a smooth lens model (see the discussion in Section \ref{ssec:lostats}) using the Born approximation, and through full multi-plane ray-tracing. The difference between the solid and dotted curves in the figure, which represent flux ratios computed with and without the Born approximation, respectively, is comparable to the difference of WDM and CDM mass functions in Figure \ref{fig:fluxdistributions}. Thus, we conclude that full multi-plane ray-tracing approach is required to accurately predict image flux ratios and probe dark matter on small scales. 
@@ -430,7 +430,7 @@ The Born approximation computes the deflection at each subsequent plane along an
 	\caption{\label{fig:bornfluxes} The two curves show distributions of summary statistics computed with respect to a smooth lens model. The curves are computed for the same CDM mass function, with and without the use of the Born approximation. The disagreement between the two curves suggests that the Born approximation does not predict image flux ratios accurately enough to differentiate between dark matter models.}
 \end{figure}	
 
-\section{\bf Appendix C: A fast algorithm for multi-plane lensing computations}
+\section{Appendix C: A fast algorithm for multi-plane lensing computations}
 \label{app:C}
 \begin{figure}
 	\centering
@@ -449,7 +449,7 @@ A visual representation of this process is presented in Figure \ref{fig:raytrace
 
 This procedure accomplishes the optimization of a macromodel with background halos 10-50 times faster than a naive optimization with all background halos included simultaneously. We test that the flux ratio statistics are identical to those obtained by ray tracing through full realizations without the perturbative approach implemented. We note that this algorithm is reminiscent of the Born approximation in that it initially neglects the presence of small deflections from subhalos along the line of sight, but differs fundamentally from the Born approximation in that the full non-linear coupling between every subhalo is eventually accounted for. 
 
-\section{\bf Appendix D: Convergence of posterior distributions}
+\section{Appendix D: Convergence of posterior distributions}
 \label{app:D}
 
 We approximate the true posterior distributions for model parameters by retaining the top 1,500 samples (ranked by their summary statistics) out of the 600,000 realizations computed per lens. To test whether this procedure yields an accurate approximation to the true posterior distribution, we appeal to a certain feature of Approximate Bayesian Computing algorithms, namely, that the approximation to the true posterior distribution converges as the number of samples increases. We can therefore test for convergence by applying the same cut on the top 1,500 samples to an `under-sampled' model with only 400,000 realizations per lens, and check that the posterior distribution stays approximately fixed in place. We generate the sample of 400,000 by drawing the realizations randomly from the computed set of 600,000.
