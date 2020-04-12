@@ -54,11 +54,12 @@ This section describes the parameterization of the subhalo mass function in the 
 \subsection{Mass profile of individual halos}
 \label{ssec:mdefs}
 \begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/mfunction.pdf}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/mcrelation.pdf}
-	\caption{\label{fig:mcrelation} {\bf{Top:}} The subhalo mass function for CDM and a WDM scenario with a half-mode mass of $10^7 \msun$. The line of sight halo mass function looks qualitatively similar, but evolves slightly with redshift. {\bf{Bottom:}} The mass concentration relation for the same CDM and WDM models as in the upper panel. The effects of free-streaming on the mass-concentration relation alter the properties of halos two orders of magnitude above the half-mode mass.}
+	\caption[Example plot fo the subhalo mass function]{\label{fig:mcrelation} {\bf{Top:}} The subhalo mass function for CDM and a WDM scenario with a half-mode mass of $10^7 \msun$. The line of sight halo mass function looks qualitatively similar, but evolves slightly with redshift. {\bf{Bottom:}} The mass concentration relation for the same CDM and WDM models as in the upper panel. The effects of free-streaming on the mass-concentration relation alter the properties of halos two orders of magnitude above the half-mode mass.}
 \end{figure}	
 We model the density profiles of dark matter halos using truncated NFW profiles \cite{Baltz++09} 
 \begin{equation}
@@ -115,16 +116,18 @@ We parameterize free-streaming effects on the mass function through the half-mod
 We note that other parameterizations for the turnover in the mass function differ slightly from Equation \ref{eqn:wdmmassfunc} \cite[see ][]{Schneider++12,Benson++13}. For instance, the WDM mass functions by \cite{Benson++13} exhibit a harder turnover than the parameterization in Equation \ref{eqn:wdmmassfunc} due to physical effects, namely, the presence of dark matter velocity dispersion at early times. Other (non-physical) variables, including the different algorithms for identifying and assigning mass to halos, and the choice of window function used to compute the matter power spectrum, can yield different mass functions for the same dark matter model. We do not explicitly address these complications in this work. Finally, we note that the effects of dark matter free-streaming may be enhanced at high redshift, suppressing halo counts relative to CDM more than that predicted by Equation \ref{eqn:wdmmassfunc}. This would increase the disparity between CDM and WDM on small scales, which would result in stronger constraints on $\mhm$ than those we project in this work. However, lacking a clear prediction for the redshift evolution of the WDM mass function, we do not model the effect in our forecasts. 
 
 \begin{figure*}
+	\centering
 	\includegraphics[clip,trim=1cm 8.2cm 0.5cm
 	5cm,width=.96\textwidth,keepaspectratio]{./figures_LOSforward/nonlinear_kappa_plot.pdf}
-	\caption{\label{fig:kappa_effective} A visualization of the mass distributions that affect observables in single-plane and multi-plane lensing. The top and bottom rows show a single realization of CDM and WDM structure, respectively. {\bf{Left:}} The convergence map from subhalos of the main deflector only, with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$, which corresponds to a projected mass fraction in substructure at the Einstein radius of $1\%$ at $z = 0.5$. {\bf{Center:}} The full line of sight realization viewed in projection. Computing deflection angles with respect to these mass distribution effectively employs the Born approximation, in which the deflection angles from halos at different redshifts are computed by assuming light travels along an unperturbed path. There are blue regions with negative mass due to the inclusion of negative convergence sheets at each lens plane (see discussion in Section 2.2). {\bf{Right:}} The \textit{effective multi-plane convergence} for these realizations. The deflection angles corresponding to these convergence maps, after subtracting off the convergence from the main deflector, include the non-linear effects present in multi-plane lensing not captured by the Born approximation (see Appendix \ref{app:A}).}
+	\caption[Maps of the \textit{Effective multi-plane convergence} for CDM and WDM]{\label{fig:kappa_effective} A visualization of the mass distributions that affect observables in single-plane and multi-plane lensing. The top and bottom rows show a single realization of CDM and WDM structure, respectively. {\bf{Left:}} The convergence map from subhalos of the main deflector only, with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$, which corresponds to a projected mass fraction in substructure at the Einstein radius of $1\%$ at $z = 0.5$. {\bf{Center:}} The full line of sight realization viewed in projection. Computing deflection angles with respect to these mass distribution effectively employs the Born approximation, in which the deflection angles from halos at different redshifts are computed by assuming light travels along an unperturbed path. There are blue regions with negative mass due to the inclusion of negative convergence sheets at each lens plane (see discussion in Section 2.2). {\bf{Right:}} The \textit{effective multi-plane convergence} for these realizations. The deflection angles corresponding to these convergence maps, after subtracting off the convergence from the main deflector, include the non-linear effects present in multi-plane lensing not captured by the Born approximation (see Appendix \ref{app:A}).}
 \end{figure*}	
 \begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/fluxratio_distributions_zclose.pdf}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/fluxratio_distributions_zfar.pdf}
-	\caption{\label{fig:fluxdistributions} Distributions of the summary statistic in Equation \ref{eqn:summary_statsmooth} for different dark matter mass functions, and lens and source redshifts. Dotted curves represent realizations of main deflector subhalos only, while the solid curves include both subhalos and line of sight halos. Black and grey curves denote CDM mass functions with normalizations $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$ and $0.024 \rm{kpc^{-2}}$, respectively, while magenta curves correspond to WDM mass functions with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$ and $\mhm = 10^{8} \msun$. Mass functions with more small scale structure produce more frequent flux ratio anomalies with respect to smooth lens models, which results in longer tails in the cumulative distribution of these statistics. The boost in the frequency and magnitude of flux ratio anomalies is much stronger for configurations with higher lens/source redshifts.}
+	\caption[Distributions of flux ratio anomalies as a function of lens and source redshift]{\label{fig:fluxdistributions} Distributions of the summary statistic in Equation \ref{eqn:summary_statsmooth} for different dark matter mass functions, and lens and source redshifts. Dotted curves represent realizations of main deflector subhalos only, while the solid curves include both subhalos and line of sight halos. Black and grey curves denote CDM mass functions with normalizations $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$ and $0.024 \rm{kpc^{-2}}$, respectively, while magenta curves correspond to WDM mass functions with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$ and $\mhm = 10^{8} \msun$. Mass functions with more small scale structure produce more frequent flux ratio anomalies with respect to smooth lens models, which results in longer tails in the cumulative distribution of these statistics. The boost in the frequency and magnitude of flux ratio anomalies is much stronger for configurations with higher lens/source redshifts.}
 \end{figure}
 
 Thermally produced dark matter particles (thermal relics), assuming they comprise the entirety of the dark matter, admit a one-to-one mapping between the half-mode mass $m_{\rm{hm}}$ and the mass of the dark matter particle $m_{\rm{DM}}$. To translate between these two quantities, we use the scaling $m_{\rm{hm}} \sim m_{\rm{DM}}^{-3.33}$ \cite{Schneider++12}, and normalize this relation using the $2\times 10^8 \msun h^{-1} \sim 3.3 \ \rm{keV}$ constraint from the Lyman-$\alpha$ forrest \cite{Viel13}. This yields
@@ -212,9 +215,10 @@ where the subscript (13) refers to the assumed halo mass of $10^{13} \msun$.  We
 We derive a projected mass density in subhalos by integrating Equation \ref{eqn:submfunc2} over mass, and find values of $\Sigma_{\rm{sub}} \sim 0.01-0.02 \ \rm{kpc^{-2}}$ yield surface mass densities in substructure similar to those derived in simulations of early-type galaxy halos of $10^7 \msun \rm{kpc^{-2}}$ with a pivot mass of $m_0 = 10^{8} \msun$ \cite{Fiacconi++16}. This normalization in principle depends on the severity of tidal stripping, the host halo mass, the halo redshift, and the halo formation time. Rather than modeling all of these effects from first principles, we subsume them in the normalization $\Sigma_{\rm{sub}}$, and impose a wide (flat) prior on this parameter between $0-0.045 \rm{kpc^{-2}}$. \cite{Gilman++18} demonstrate that the mean normalization in the lens sample effectively scales the information content available per lens; we perform the same analysis in this work, examining how the constraints on dark matter respond to different values of $\Sigma_{\rm{sub}}$. 
 
 Given a detailed model for the redshift evolution and halo mass depedence of the normalization, as well as the effects of tidal stripping, a non-flat, more informative prior could be used. Since we lack this information, and since we subsume the halo mass dependence and redshift evolution into $\Sigma_{\rm{sub}}$, we assume minimum information and use a flat prior.
+\begin{landscape}
 \begin{table*}
 	\centering
-	\caption{Parameters sampled in the forward model}
+	\caption[Summary of model parameters]{Parameters sampled in the forward model}
 	\label{tab:params}
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
@@ -238,6 +242,7 @@ Given a detailed model for the redshift evolution and halo mass depedence of the
 		
 	\end{tabular}
 \end{table*}
+\end{landscape}
 \subsubsection{Free streaming in WDM}
 Regarding the implementation of WDM mass functions, we assume that the parameterization of the mass function turnover near $\mhm$ (Equation \ref{eqn:wdmmassfunc}) applies to both halos along the line of sight, and for subhalos in the main lens halo. As we vary the half-mode mass $\mhm$ between $10^{4.8} - 10^{10} \msun$, none of the models considered are truly `cold' in the sense of GeV-scale WIMPS with free-streaming masses of order an Earth mass. However, provided $\mhm << m_{\rm{low}} = 10^6 \msun$, the halo populations rendered result in the same observables as those in a CDM universe. \footnote{This is only true if the signal in flux ratio saturates at $m_{\rm{low}}$, otherwise we would miss part of the signal from halos with mass $<m_{\rm{low}}$. We verify that halos of mass below $10^6 \msun$ do not significantly affect the flux ratio signal for the background source sizes 25-50 pc.} We therefore interpret inferences that favor models with $\mhm <  10^6 \msun$ as consistent with CDM, even though the true half-mode mass may be in fact be much lower than the value we recover. Finally, while we implement scatter and redshift dependence in the mass concentration relation in Equation \ref{eqn:cmrelation}, we do not marginalize over the parameters describing the turnover for WDM models. 
 
@@ -291,40 +296,41 @@ To create mock data sets, we parameterize the lens macromodel as a power-law ell
 We choose background source positions to produce roughly equal numbers of cross, fold, and cusp image configurations. Cusp and fold configurations generally yield the strongest constraints on WDM properties (see Appendix B in \cite{Gilman++18}), and since the images in these types of quads have higher magnifications they may be more easily discovered. It is therefore possible that a real sample of quads would consist of more cusp and fold configurations than crosses, in which case the resulting constraints on WDM would be stronger than those obtained in this work.
 
 When generating the mock data sets, we add measurement errors to the image positions of $3$ m.a.s., and model statistical measurement errors by adding perturbations to the image fluxes, as described in Section \ref{ssec:fluxdelta}.
-\begin{wrapfigure}{L}{0.52\textwidth}
+\begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	1.5cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/zlens_zsrc.pdf}
+	1.5cm,width=.75\textwidth,keepaspectratio]{./figures_LOSforward/zlens_zsrc.pdf}
 	\captionsetup{width=.45\textwidth}
-	\caption{\label{fig:zlenszsrc} The lens and source redshifts for the 50 quads in our mock lens sample. We draw these parameters, along with the lens velocity dispersion, ellipticity, and shear from the distributions used by \cite{OguriMarshall10}. }
-\end{wrapfigure}	
+	\caption[Joint distribution of mock lens and source redshifts]{\label{fig:zlenszsrc} The lens and source redshifts for the 50 quads in our mock lens sample. We draw these parameters, along with the lens velocity dispersion, ellipticity, and shear from the distributions used by \cite{OguriMarshall10}. }
+\end{figure}	
 
 \section{Simulations of substructure lensing: Results}
 \label{sec:results}
 \begin{figure*}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.9\textwidth,keepaspectratio]{./figures_LOSforward/CDM_full.pdf}
-	\caption{\label{fig:CDM_1} The posterior distributions resulting from the forward modeling analysis of a sample of 50 lenses, with flux uncertainties stemming from measurement errors and lens modeling controlled at the $2\%$, $4\%$, and $6\%$ level. Vertical bars in the marginal distribution indicate $2 \sigma$ confidence interval, while dashed (solid) lines in the panels denote $2 \sigma$ $\left(1 \sigma\right)$ contours. The marginalized constraints on $\mhm$ range from $10^{7.2} \msun$ for the case of $2 \%$ flux uncertainties, to $10^{8.8} \msun$ for uncertainties of $6 \%$.}
+	\caption[Joint posterior distribution for all model parameters from 50 mock lenses]{\label{fig:CDM_1} The posterior distributions resulting from the forward modeling analysis of a sample of 50 lenses, with flux uncertainties stemming from measurement errors and lens modeling controlled at the $2\%$, $4\%$, and $6\%$ level. Vertical bars in the marginal distribution indicate $2 \sigma$ confidence interval, while dashed (solid) lines in the panels denote $2 \sigma$ $\left(1 \sigma\right)$ contours. The marginalized constraints on $\mhm$ range from $10^{7.2} \msun$ for the case of $2 \%$ flux uncertainties, to $10^{8.8} \msun$ for uncertainties of $6 \%$.}
 \end{figure*}	
 \begin{figure*}
 	\includegraphics[clip,trim=2cm 0cm 3.5cm
 	0.25cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/CDM_lownorm_joint.pdf}
 	\includegraphics[clip,trim=2cm 0cm 3.5cm
 	0.5cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/CDM_lownorm_mhm.pdf}
-	\caption{\label{fig:fluxuncertainties_CDM1} Inference on a CDM mass function with a normalization of the subhalo mass function $\Sigma_{\rm{sub}} = 0.01$, roughly half the value of the normalization assumed in Figure \ref{fig:CDM_1}. The color scheme is the same as in Figure \ref{fig:CDM_1}, with black, magenta, and blue representing flux uncertainties of $2\%$, $4\%$, and $6\%$, respectively. In this case, the marginalized constraints on $\mhm$ are $10^{9.1} \msun$, $10^{8.1} \msun$, and $10^{8.1} \msun$ for flux uncertainties of $6 \%$, $4\%$, and $2 \%$ (for the $4\%$ and $2\%$ flux uncertainties, the $2 \sigma$ confidence interval happen to be the same). These constraints are weaker by roughly an order of magnitude in mass over the bounds quoted in Figure \ref{fig:CDM_1}, which illustrates the role of the normalization of the subhalo mass function on the possible constrains on $\mhm$.}
+	\caption[Joint posterior distribution of the normalization of the SHMF and the half-mode mass from CDM mock data]{\label{fig:fluxuncertainties_CDM1} Inference on a CDM mass function with a normalization of the subhalo mass function $\Sigma_{\rm{sub}} = 0.01$, roughly half the value of the normalization assumed in Figure \ref{fig:CDM_1}. The color scheme is the same as in Figure \ref{fig:CDM_1}, with black, magenta, and blue representing flux uncertainties of $2\%$, $4\%$, and $6\%$, respectively. In this case, the marginalized constraints on $\mhm$ are $10^{9.1} \msun$, $10^{8.1} \msun$, and $10^{8.1} \msun$ for flux uncertainties of $6 \%$, $4\%$, and $2 \%$ (for the $4\%$ and $2\%$ flux uncertainties, the $2 \sigma$ confidence interval happen to be the same). These constraints are weaker by roughly an order of magnitude in mass over the bounds quoted in Figure \ref{fig:CDM_1}, which illustrates the role of the normalization of the subhalo mass function on the possible constrains on $\mhm$.}
 \end{figure*}	
 \begin{figure*}
 	\includegraphics[clip,trim=2cm 0cm 3.5cm
 	0.25cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/WDM_246_77_joint.pdf}
 	\includegraphics[clip,trim=2cm 0cm 3.5cm
 	0.5cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/WDM_246_77_mhm.pdf}
-	\caption{\label{fig:WDM_1} Inference on a WDM mass function with a half-mode mass of $10^{7.7} \msun$ ($m_{\rm{thermal}} = 5.4 \ \rm{keV}$), with the same color scheme as Figure \ref{fig:CDM_1}. As in Figure \ref{fig:CDM_1}, we marginalize over the parameters listed in \ref{tab:params} and over various degrees of flux uncertainty, and the color scheme is the same as in Figures \ref{fig:CDM_1} and \ref{fig:fluxuncertainties_CDM1}. For flux uncertainties of $2\%$, $4\%$, and $6\%$, we favor WDM with $\mhm > 10^{7.7} \msun$ over CDM with likelihood ratios of 22, 30, and 8, respectively.}
+	\caption[Joint posterior distribution of the normalization of the SHMF and the half-mode mass from WDM mock data (1)]{\label{fig:WDM_1} Inference on a WDM mass function with a half-mode mass of $10^{7.7} \msun$ ($m_{\rm{thermal}} = 5.4 \ \rm{keV}$), with the same color scheme as Figure \ref{fig:CDM_1}. As in Figure \ref{fig:CDM_1}, we marginalize over the parameters listed in \ref{tab:params} and over various degrees of flux uncertainty, and the color scheme is the same as in Figures \ref{fig:CDM_1} and \ref{fig:fluxuncertainties_CDM1}. For flux uncertainties of $2\%$, $4\%$, and $6\%$, we favor WDM with $\mhm > 10^{7.7} \msun$ over CDM with likelihood ratios of 22, 30, and 8, respectively.}
 \end{figure*}	
 \begin{figure*}
 	\includegraphics[clip,trim=2cm 0cm 3.5cm
 	0.25cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/WDM_246_7_joint.pdf}
 	\includegraphics[clip,trim=2cm 0cm 3.5cm
 	0.5cm,width=.48\textwidth,keepaspectratio]{./figures_LOSforward/WDM_246_7_mhm.pdf}
-	\caption{\label{fig:WDM_2} Inference on a WDM mass function with a half-mode mass of $10^{7} \msun$ ($m_{\rm{thermal}} = 8.2 \ \rm{keV}$)., marginalized over the parameters listed in Table \ref{tab:params}, with the same color scheme as Figure \ref{fig:CDM_1}. For each degree of uncertainty in image fluxes, the peak of the posterior coincides with the location of the the turnover at $10^{7}\msun$, but the width of the distributions increases. With uncertainties of $2\%$, $4\%$, and $6\%$ we favor WDM mass functions with $\mhm > 10^{7} \msun$ over CDM with likelihood ratios of 4:1, 3:1, and 2:1, respectively.}
+	\caption[Joint posterior distribution of the normalization of the SHMF and the half-mode mass from WDM mock data (2)]{\label{fig:WDM_2} Inference on a WDM mass function with a half-mode mass of $10^{7} \msun$ ($m_{\rm{thermal}} = 8.2 \ \rm{keV}$)., marginalized over the parameters listed in Table \ref{tab:params}, with the same color scheme as Figure \ref{fig:CDM_1}. For each degree of uncertainty in image fluxes, the peak of the posterior coincides with the location of the the turnover at $10^{7}\msun$, but the width of the distributions increases. With uncertainties of $2\%$, $4\%$, and $6\%$ we favor WDM mass functions with $\mhm > 10^{7} \msun$ over CDM with likelihood ratios of 4:1, 3:1, and 2:1, respectively.}
 \end{figure*}	
 This section presents the results of our analysis, in which we test the forward modeling machinery described in the previous section to constrain dark matter properties. We discuss how measurement and modeling uncertainties affect the precision of constraints on both CDM and WDM mass functions, and make projections for the constraints on the half-mode mass. We explicitly consider 4 models: Two CDM cases with a different normalization of the subhalo mass function $\Sigma_{\rm{sub}}$, and two WDM cases with half-mode masses of $10^{7.7} \msun$, and $10^{7} \msun$. 
 
@@ -333,8 +339,8 @@ This section presents the results of our analysis, in which we test the forward 
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=.6\textwidth,keepaspectratio]{./figures_LOSforward/2sigma_mhm.pdf}
-	\caption{\label{fig:2sigmamhm} Forecasts for the constraints on the half-mode mass as a function of the number of lenses, including line of sight halos and subhalos of the main deflector. Black, purple, blue, and red colors denote flux uncertainties of $2\%$, $4\%$, $6\%$, and $8\%$. The solid line corresponds to a normalization $\Sigma_{\rm{sub}} = 0.008 \rm{kpc^{-2}}$, while dashed lines correspond to $\Sigma_{\rm{sub}} = 0.022 \rm{kpc^{-2}}$. The y-axis labels represent the $2 \sigma$ bound on $\mhm$, with the mass of the corresponding thermal relic dark matter particle in parentheses. Models with more subhalos (dashed lines), and hence more signal, are more resilient to flux uncertainties than models with fewer lens planes subhalos (solid lines) and produce stronger constraints on $\mhm$. }
+	0cm,width=.75\textwidth,keepaspectratio]{./figures_LOSforward/2sigma_mhm.pdf}
+	\caption[Projections on the constraints on the half-mode mass as a function of the number of lenses and measurement uncertainties, accounting for line-of-sight halos]{\label{fig:2sigmamhm} Forecasts for the constraints on the half-mode mass as a function of the number of lenses, including line of sight halos and subhalos of the main deflector. Black, purple, blue, and red colors denote flux uncertainties of $2\%$, $4\%$, $6\%$, and $8\%$. The solid line corresponds to a normalization $\Sigma_{\rm{sub}} = 0.008 \rm{kpc^{-2}}$, while dashed lines correspond to $\Sigma_{\rm{sub}} = 0.022 \rm{kpc^{-2}}$. The y-axis labels represent the $2 \sigma$ bound on $\mhm$, with the mass of the corresponding thermal relic dark matter particle in parentheses. Models with more subhalos (dashed lines), and hence more signal, are more resilient to flux uncertainties than models with fewer lens planes subhalos (solid lines) and produce stronger constraints on $\mhm$. }
 \end{figure}	
 Beginning with the CDM mass functions, in Figure \ref{fig:CDM_1} we show posterior distributions for all the parameters sampled in the forward model for a CDM mass function with a normalization of $\Sigma_{\rm{sub}} = 0.018 \ \rm{kpc^{-2}}$. As described in Section \ref{sec:simsetup}, we add flux perturbations of $2 \%$, $4 \%$, and $6 \%$ the mock data and model fluxes to simulate measurement errors, and additional sources of flux uncertainty that stem from lens modeling. We marginalize over ten realizations of these flux perturbations to reduce shot noise in the posterior distributions. 
 
@@ -415,7 +421,7 @@ In Figure \ref{fig:test2halo} we plot the distribution of summary statistics $S_
 	\centering
 	\includegraphics[clip,trim=0cm 0.5cm 0cm
 	0cm,width=.6\textwidth,keepaspectratio]{./figures_LOSforward/2halotest.pdf}
-	\caption{\label{fig:test2halo} Distributions of the summary statistic $S_{\rm{smooth}}$, which represents the amount of flux ratio anomaly with respect to a smooth lens model (see the discussion in Section \ref{sec:multiplanelensing}). The grey curve is computed with the two-halo contribution, and the red curve is computed without it. Both models include only line of sight halos to isolate the contribution from $\xi_{\rm{2halo}}$. The largest difference between the curves, an offset of $4\%$, lies at $S_{\rm{smooth}} \sim 0.2$. }
+	\caption[On the effect of the two-halo term]{\label{fig:test2halo} Distributions of the summary statistic $S_{\rm{smooth}}$, which represents the amount of flux ratio anomaly with respect to a smooth lens model (see the discussion in Section \ref{sec:multiplanelensing}). The grey curve is computed with the two-halo contribution, and the red curve is computed without it. Both models include only line of sight halos to isolate the contribution from $\xi_{\rm{2halo}}$. The largest difference between the curves, an offset of $4\%$, lies at $S_{\rm{smooth}} \sim 0.2$. }
 \end{figure}	
 
 \section{Appendix B:The Born approximation in substructure lensing}
@@ -427,7 +433,7 @@ The Born approximation computes the deflection at each subsequent plane along an
 	\centering
 	\includegraphics[clip,trim=0cm 0.5cm 0cm
 	0cm,width=.6\textwidth,keepaspectratio]{./figures_LOSforward/test_born.pdf}
-	\caption{\label{fig:bornfluxes} The two curves show distributions of summary statistics computed with respect to a smooth lens model. The curves are computed for the same CDM mass function, with and without the use of the Born approximation. The disagreement between the two curves suggests that the Born approximation does not predict image flux ratios accurately enough to differentiate between dark matter models.}
+	\caption[On the effect of the Born approximation in multi-plane lensing]{\label{fig:bornfluxes} The two curves show distributions of summary statistics computed with respect to a smooth lens model. The curves are computed for the same CDM mass function, with and without the use of the Born approximation. The disagreement between the two curves suggests that the Born approximation does not predict image flux ratios accurately enough to differentiate between dark matter models.}
 \end{figure}	
 
 \section{Appendix C: A fast algorithm for multi-plane lensing computations}
@@ -436,7 +442,7 @@ The Born approximation computes the deflection at each subsequent plane along an
 	\centering
 	\includegraphics[clip,trim=1cm 4cm 1cm
 	1cm,width=.8\textwidth,keepaspectratio]{./figures_LOSforward/perturbative_ray_trace.pdf}
-	\caption{\label{fig:raytracealgorithm} A visualization of the perturbative ray tracing algorithm we use to optimize lens models with potentially thousands of line of sight halos. The panels show the path through the background field relative to a straight line for multiple iterations of the algorithm, in which progressively smaller halos are rendered in progressively smaller apertures around the path of the light rays. This procedure speeds up optimizations of lens models with line of sight halos by at least an order of magnitude.}
+	\caption[A visualization of the algorithm implemented to speed up multi-plane ray tracing]{\label{fig:raytracealgorithm} A visualization of the perturbative ray tracing algorithm we use to optimize lens models with potentially thousands of line of sight halos. The panels show the path through the background field relative to a straight line for multiple iterations of the algorithm, in which progressively smaller halos are rendered in progressively smaller apertures around the path of the light rays. This procedure speeds up optimizations of lens models with line of sight halos by at least an order of magnitude.}
 \end{figure}	
 
 For each observed lens, our forward modeling approach requires finding a set of macromodel parameters that cast the four light rays in a quadrupole image system to the same location in the source plane. For a single realization, this typically requires hundreds to thousands of backwards ray-tracing computations. 
@@ -459,5 +465,5 @@ We perform this test and plot the results in Figure \ref{fig:convergence_test}. 
 \begin{figure*}
 	\includegraphics[clip,trim=2cm 0cm 1cm
 	0cm,width=.9\textwidth,keepaspectratio]{./figures_LOSforward/convergence_test.pdf}
-	\caption{\label{fig:convergence_test} A convergence test for the forward model simulations. The overall agreement between the black and red distributions indicates that the posteriors we derive, and the numerical operations involved to produce them including the kernel density estimation, are robust to changes in the number of forward model samples per lens.}
+	\caption[Convergence test for the posteriors from mock data]{\label{fig:convergence_test} A convergence test for the forward model simulations. The overall agreement between the black and red distributions indicates that the posteriors we derive, and the numerical operations involved to produce them including the kernel density estimation, are robust to changes in the number of forward model samples per lens.}
 \end{figure*}

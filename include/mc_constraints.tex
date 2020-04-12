@@ -49,17 +49,17 @@ where $\rho_{\rm{crit}}$ is the critical density of the Universe today, $x = \fr
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=0.45\textwidth,keepaspectratio]{./figures_mcrelation/mc_relations.pdf}
-	\caption{\label{fig:mcrelations} Mass-concentration relations from the literature as a function of halo mass and redshift, compared with the functional form for the relation in Equation \ref{eqn:mcrelation}. The parameterization of the mass-concentration relation we constrain in this work has a variable normalization $c_0$ and logarithmic slope $\beta$, with a redshift evolution modified by an empirical factor $\zeta$. Models plotted from the literature are valid in the mass range shown in the figure.}
+	0cm,width=0.6\textwidth,keepaspectratio]{./figures_mcrelation/mc_relations.pdf}
+	\caption[Example plot of mass-concentration relations from the literature]{\label{fig:mcrelations} Mass-concentration relations from the literature as a function of halo mass and redshift, compared with the functional form for the relation in Equation \ref{eqn:mcrelation}. The parameterization of the mass-concentration relation we constrain in this work has a variable normalization $c_0$ and logarithmic slope $\beta$, with a redshift evolution modified by an empirical factor $\zeta$. Models plotted from the literature are valid in the mass range shown in the figure.}
 \end{figure}	
 
 Despite progress over the past two decades in identifying the astrophysical process shaping the mass-concentration relation, a first-principles derivation does not exist and the form of the mass-concentration relation on mass scales below $10^{9} \msun$ remains unconstrained by observations. We remedy this situation using the flux ratios and images positions from 11 quadruple-image strong gravitational lenses to constrain the mass-concentration relation on scales $\leq 10^{8} \msun$, where halos are expected to be mostly devoid of stars and gas \cite{Sawala++15}. Strong lensing is a powerful tool for constraining the abundance and structure of dark matter halos as it measures dark matter structures directly, without relying on luminous matter to trace the dark matter \cite{D+K02,Veg++14,Nierenberg++14,Birrer++17a,Hsueh++19,Gilman++19b}. In this letter, we deploy the statistical machinery developed and tested by \cite{Gilman++19} to constrain the mass-concentration relation of CDM halos on scales below $10^8 \msun$ at cosmological distance. 
-\begin{wrapfigure}{L}{0.52\textwidth}
+\begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=0.45\textwidth,keepaspectratio]{./figures_mcrelation/concentration_cross_section.pdf}
-	\captionsetup{width=.45\textwidth}
-	\caption{\label{fig:cross} Magnification perturbation cross section of a $10^{8} \msun$ halo at $z=0.5$ with various concentrations for a 30 pc background source at $z=1.5$. More concentrated halos are more efficient lenses, resulting in stronger flux perturbations.}
-\end{wrapfigure}	
+	0cm,width=0.75\textwidth,keepaspectratio]{./figures_mcrelation/concentration_cross_section.pdf}
+	\caption[Magnification cross section as a function of halo concentration]{\label{fig:cross} Magnification perturbation cross section of a $10^{8} \msun$ halo at $z=0.5$ with various concentrations for a 30 pc background source at $z=1.5$. More concentrated halos are more efficient lenses, resulting in stronger flux perturbations.}
+\end{figure}	
 
 This letter is organized as follows. In Section \ref{sec:modeling}, we review the parameterizations of the subhalo and halo mass functions, and describe the parameterization of the mass-concentration relation we constrain in this work. We also briefly discuss the observable signatures of halo concentrations on image flux ratios, and briefly review our Bayesian inference methodology. For more detailed discussion of the mass functions and inference method, we defer to the text of \cite{Gilman++19b}. Section \ref{sec:data} discusses the data used in this analysis. In Section \ref{sec:results}, we present our main results, and we provide concluding remarks in Section \ref{sec:conclusions}. 
 
@@ -74,7 +74,7 @@ In this section we describe the modeling of the CDM subhalo and line of sight ha
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=0.95\textwidth,keepaspectratio]{./figures_mcrelation/joint_pdf.pdf}
-	\caption{\label{fig:joint} Constraints on the normalization $c_0$ and the logarithmic slope $\beta$ of the mass-concentration relation in Equation \ref{eqn:mcrelation}. We include the constraints on the normalization of the subhalo mass function $\Sigma_{\rm{sub}}$, as it is covariant with both $c_0$ and $\beta$. Contours show $68\%$ and $95\%$ confidence intervals. The parameter $\zeta$, for which we use a Gaussian prior $\mathcal{N} \left(-0.25, 0.05\right)$, is unconstrained. Vertical bars represent $95\%$ confidence intervals.}
+	\caption[Posterior distributions of hyper-parameters specifying the mass-concentration relation]{\label{fig:joint} Constraints on the normalization $c_0$ and the logarithmic slope $\beta$ of the mass-concentration relation in Equation \ref{eqn:mcrelation}. We include the constraints on the normalization of the subhalo mass function $\Sigma_{\rm{sub}}$, as it is covariant with both $c_0$ and $\beta$. Contours show $68\%$ and $95\%$ confidence intervals. The parameter $\zeta$, for which we use a Gaussian prior $\mathcal{N} \left(-0.25, 0.05\right)$, is unconstrained. Vertical bars represent $95\%$ confidence intervals.}
 \end{figure}	
 
 The mass function for field halos\footnote{In lensing nomenclature these are also referred to as `line of sight' halos.} is parameterized in terms of the Sheth-Tormen (ST) halo mass function \cite{ST99} $\frac{d^2N}{dm  dV} \big \vert_{\rm{ShethTormen}}$
@@ -138,12 +138,12 @@ We assume the mean host halo mass inferred in strong lens systems $\log_{10} \le
 
 \section{Results}
 \label{sec:results}
-\begin{wrapfigure}{R}{0.52\textwidth}
+\begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=0.45\textwidth,keepaspectratio]{./figures_mcrelation/mc_summary.pdf}
-	\captionsetup{width=.45\textwidth}
-	\caption{\label{fig:mcphys} Constraints on the concentration-mass relation of CDM halos derived from the posterior distribution of hyper-parameters shown in Figure \ref{fig:joint}, computed with eleven strong gravitational lenses. Black solid (dashed) lines contain $68\%$ ($95\%$) confidence intervals at fixed halo mass. White curves show several concentration-mass relations from the literature also plotted in Figure \ref{fig:mcrelations}.}
-\end{wrapfigure}	
+	0cm,width=0.75\textwidth,keepaspectratio]{./figures_mcrelation/mc_summary.pdf}
+	\caption[Constraints on the concentration of halos as a function of halo mass]{\label{fig:mcphys} Constraints on the concentration-mass relation of CDM halos derived from the posterior distribution of hyper-parameters shown in Figure \ref{fig:joint}, computed with eleven strong gravitational lenses. Black solid (dashed) lines contain $68\%$ ($95\%$) confidence intervals at fixed halo mass. White curves show several concentration-mass relations from the literature also plotted in Figure \ref{fig:mcrelations}.}
+\end{figure}	
 Figure \ref{fig:joint} shows posterior distributions for $c_0$, $\beta$, and $\Sigma_{\rm{sub}}$. The parameters $c_0$ and $\Sigma_{\rm{sub}}$ are covariant, as more concentrated halos and more numerous halos both act to increase the clumpiness of dark matter structure on small scales, and hence the lensing signal. Similarly, steeper logarithmic slopes $\beta$ lower the concentrations of halos with mass above $10^8 \msun$ above the point point in Equation \ref{eqn:mcrelation}, which can be partially accounted for by increasing the overall normalization $c_0$.
 
 We sample the posterior distribution of hyper-parameters in Figure \ref{fig:joint} to obtain constraints on the halo concentrations as a function of mass, and show the results in Figure \ref{fig:mcphys}. Our constraints are consistent with the subset of models from the literature applicable in the halo mass range $10^6 - 10^{10} \msun$ relevant for our analysis. The uncertainties on concentrations of low-mass halos are larger than those of high mass halos, a result of the correlation between $c_0$ and $\beta$ in the posterior distribution in Figure \ref{fig:joint}. The inference on the parameters describing the mass-concentration relation are marginalized over the normalization of the subhalo mass function, the amplitude of the line of sight halo mass function, the slope of the subhalo mass function, and nuisance parameters describing the main deflector lens models and the background source size, given our choice of priors and their motivation detailed by \cite{Gilman++19b}. 

@@ -94,7 +94,7 @@ where the quantities $D_{\rm{s}}$, $D_{\rm{k}}$ and $D_{\rm{ks}}$ denote angular
 	\centering
 	\includegraphics[clip,trim=3.5cm 4cm 2.5cm
 	4cm,width=.49\textwidth,keepaspectratio]{./figures_wdmchillsout/flowchart.pdf}
-	\caption{\label{fig:flowchart}  A graphical representation of the forward modeling procedure. Purple colors correspond to the action of sampling from a prior, blue represents an operation performed using the parameters sampled from a prior, and green colors indicate the use of observed information from the lenses. The arrow of time points from top to bottom: The first step is the rendering of dark matter structure, while the use of the information from observed flux ratios happens only at the very end.}
+	\caption[Schematic of the forward modeling procedure]{\label{fig:flowchart}  A graphical representation of the forward modeling procedure. Purple colors correspond to the action of sampling from a prior, blue represents an operation performed using the parameters sampled from a prior, and green colors indicate the use of observed information from the lenses. The arrow of time points from top to bottom: The first step is the rendering of dark matter structure, while the use of the information from observed flux ratios happens only at the very end.}
 \end{figure}	
 
 To solve for macromodel parameters $\qmac$, for each realization $\msub$ we sample the power-law slope of the main deflector mass profile $\gamma_{\rm{macro}}$ and the external shear strength $\gamma_{\rm{ext}}$. If the lens system in question has satellite galaxies or nearby deflectors, we sample priors for their masses and positions. The remaining parameters describing the lens macromodel\footnote{The full set of macromodel parameters for a power-law ellipsoid are the overall normalization $b_{\rm{macro}}$, the mass centroid $g_x$ and $g_y$, the ellipticity and ellipticity position angle $\epsilon$ and $\theta_{\epsilon}$, the external shear and shear angle $\gamma_{\rm{ext}}$ and $\theta_{\rm{ext}}$, and the power-law slope $\gamma_{\rm{macro}}$. Nearby galaxies are modeled as Singular Isothermal Spheres.} are allowed to vary freely until a lens model that fits the image positions is found\footnote{The four image positions provide $4\times2 = 8$ constraints, and the macromodel parameters that are allowed to vary freely, plus the source position, give $8$ degrees of freedom.}. 
@@ -118,8 +118,8 @@ To obtain the final posterior distribution $p \left(\qsub | \boldsymbol{D}\right
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=.48\textwidth,keepaspectratio]{./figures_wdmchillsout/subhalo_mfunc_scaling.pdf}
-	\caption{\label{fig:trends}  Output from the {\tt{galacticus}} semi-analytic simulations of substructure within halos used to calibrate the evolution of the subhalo mass function with halo mass and redshift. While on the y-axis we plot the actual projected surface mass density in substructure output by {\tt{galacticus}}, we only use the scaling with halo mass in redshift in our modeling, treating the overall normalization of the subhalo mass function as a free parameter. The projected mass density in substructure on the y-axis corresponds to a mass range $10^6 - 10^{10}\msun$, where we have extrapolated the mass function from the smallest resolved subhalo  ($10^{8}\msun$) to $10^{6}\msun$ to compute the projected mass. }
+	0cm,width=.7\textwidth,keepaspectratio]{./figures_wdmchillsout/subhalo_mfunc_scaling.pdf}
+	\caption[Output from the {\tt{galacticus}} semi-analytic model of substructure]{\label{fig:trends}  Output from the {\tt{galacticus}} semi-analytic simulations of substructure within halos used to calibrate the evolution of the subhalo mass function with halo mass and redshift. While on the y-axis we plot the actual projected surface mass density in substructure output by {\tt{galacticus}}, we only use the scaling with halo mass in redshift in our modeling, treating the overall normalization of the subhalo mass function as a free parameter. The projected mass density in substructure on the y-axis corresponds to a mass range $10^6 - 10^{10}\msun$, where we have extrapolated the mass function from the smallest resolved subhalo  ($10^{8}\msun$) to $10^{6}\msun$ to compute the projected mass. }
 \end{figure}
 
 \begin{figure}
@@ -127,14 +127,14 @@ To obtain the final posterior distribution $p \left(\qsub | \boldsymbol{D}\right
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_wdmchillsout/mfunction.pdf}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.48\textwidth,keepaspectratio]{./figures_wdmchillsout/mcrelation.pdf}
-	\caption{\label{fig:mcrelation} {\bf{Top:}} The subhalo mass function as a function of halo mass, redshift, and the half-mode mass $\mhm = 10^7 \msun$ with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$. The line of sight halo mass function looks similar, but evolves differently with redshift. {\bf{Bottom:}} The mass-concentration-relation for CDM and the same WDM model with $\mhm = 10^7 \msun$. Free-streaming affects the concentration of halos over one order of magnitude above $\mhm$.}
+	\caption[Example plot of the mass function and mass-concentration relation]{\label{fig:mcrelation} {\bf{Top:}} The subhalo mass function as a function of halo mass, redshift, and the half-mode mass $\mhm = 10^7 \msun$ with $\Sigma_{\rm{sub}} = 0.012 \rm{kpc^{-2}}$. The line of sight halo mass function looks similar, but evolves differently with redshift. {\bf{Bottom:}} The mass-concentration-relation for CDM and the same WDM model with $\mhm = 10^7 \msun$. Free-streaming affects the concentration of halos over one order of magnitude above $\mhm$.}
 \end{figure}		
 
 \begin{figure*}
 	\centering
 	\includegraphics[clip,trim=3.8cm 8cm 2.5cm
 	4cm,width=.8\textwidth,keepaspectratio]{./figures_wdmchillsout/schematic.pdf}
-	\caption{\label{fig:schematic} A graphical representation of the dark matter parameters in $\qsub$: $\alpha$, the logarithmic slope of the subhalo mass function, $\Sigma_{\rm{sub}}$, the overall scaling of the subhalo mass function, $\mhm$, the WDM half-mode mass, $\delta_{\rm{los}}$, the overall factor for the  line of sight halo mass function, and $M_{\rm{halo}}$, the main deflector's parent halo mass. $\xi_{\rm{2halo}}$ is implemented through Equation \ref{eqn:losmfunc} (see Section \ref{ssec:losmfunc}). These parameters are linked to the physical dark matter quantities they affect. From left to right: the subhalo mass function $\frac{d^2 N}{dm dA}$, the normalization $\rho_s$, scale radius $r_s$, and truncation radius $r_t$ of individual halos (see Equation \ref{eqn:massprofile}), and the line of sight halo mass function $\frac{d^2 N}{dm dV}$. The priors for each of these parameters are summarized in Table \ref{tab:lenspriors}, and discussed at length in Section \ref{sec:assumptionsandpriors}.}
+	\caption{Summary of model parameter inter-dependency}{\label{fig:schematic} A graphical representation of the dark matter parameters in $\qsub$: $\alpha$, the logarithmic slope of the subhalo mass function, $\Sigma_{\rm{sub}}$, the overall scaling of the subhalo mass function, $\mhm$, the WDM half-mode mass, $\delta_{\rm{los}}$, the overall factor for the  line of sight halo mass function, and $M_{\rm{halo}}$, the main deflector's parent halo mass. $\xi_{\rm{2halo}}$ is implemented through Equation \ref{eqn:losmfunc} (see Section \ref{ssec:losmfunc}). These parameters are linked to the physical dark matter quantities they affect. From left to right: the subhalo mass function $\frac{d^2 N}{dm dA}$, the normalization $\rho_s$, scale radius $r_s$, and truncation radius $r_t$ of individual halos (see Equation \ref{eqn:massprofile}), and the line of sight halo mass function $\frac{d^2 N}{dm dV}$. The priors for each of these parameters are summarized in Table \ref{tab:lenspriors}, and discussed at length in Section \ref{sec:assumptionsandpriors}.}
 \end{figure*}	
 
 \section{The subhalo and line of sight halo populations}
@@ -162,7 +162,7 @@ We render subhalos out to a maximum projected radius $3 R_{\rm{Ein}}$ and assign
 %\begin{landscape}
 \begin{table*}
 	\centering
-	\caption{Free parameters sampled in the forward model. Notation ${\mathcal{N}} \left(\mu, \sigma\right)$ indicates a Gaussian prior with mean $\mu$ and variance $\sigma$, and ${\mathcal{U}} \left(u_1, u_2\right)$ indicates a uniform prior between $u_1$ and $u_2$. Lens-specific priors are summarized in Table \ref{tab:lenspriors}. }
+	\caption[Summary of model parameters]{Free parameters sampled in the forward model. Notation ${\mathcal{N}} \left(\mu, \sigma\right)$ indicates a Gaussian prior with mean $\mu$ and variance $\sigma$, and ${\mathcal{U}} \left(u_1, u_2\right)$ indicates a uniform prior between $u_1$ and $u_2$. Lens-specific priors are summarized in Table \ref{tab:lenspriors}. }
 	\label{tab:params}
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
@@ -270,7 +270,7 @@ Specifically, we do not include quads with main lensing galaxies that contain st
 \begin{landscape}
 \begin{table*}
 	\centering
-	\caption{A summary of deflector $z_d$ and source $z_s$ redshifts, and satellite galaxies included in the lens model for the quads in our sample. Galaxy positions prior marked by $^{*}$ denote observed locations, which may differ from the true physical location due to foreground lensing effects from the lens macromodel. We correct for foreground lensing effects in our inference pipeline (see Section \ref{ssec:satgals}). Satellite galaxy locations are quoted with respect to the light centroid of the main deflector (see Table \ref{tab:datasummary}). All priors on the satellite mass $G2_{\theta_E}$ are positive definite. The raised and lowered numbers around the deflector redshifts for PS J1606, WGD J0405, and WFI 2026 are the $68\%$ confidence intervals on the estimated lens redshifts (see Appendix \ref{app:B}), which we marginalize over.}
+	\caption[Summary of lens properties]{A summary of deflector $z_d$ and source $z_s$ redshifts, and satellite galaxies included in the lens model for the quads in our sample. Galaxy positions prior marked by $^{*}$ denote observed locations, which may differ from the true physical location due to foreground lensing effects from the lens macromodel. We correct for foreground lensing effects in our inference pipeline (see Section \ref{ssec:satgals}). Satellite galaxy locations are quoted with respect to the light centroid of the main deflector (see Table \ref{tab:datasummary}). All priors on the satellite mass $G2_{\theta_E}$ are positive definite. The raised and lowered numbers around the deflector redshifts for PS J1606, WGD J0405, and WFI 2026 are the $68\%$ confidence intervals on the estimated lens redshifts (see Appendix \ref{app:B}), which we marginalize over.}
 	\label{tab:lenspriors}
 	\def\arraystretch{1.05}
 	\setlength\tabcolsep{0.04in}
@@ -383,23 +383,23 @@ The lens-specific priors on satellite galaxies are summarized in Table \ref{tab:
 	0.5cm,,width=.29\textwidth,keepaspectratio]{./figures_wdmchillsout//best0911_2.pdf}
 	\includegraphics[clip,trim=1cm 2.3cm 0.3cm
 	2.2cm,width=.34\textwidth,keepaspectratio]{./figures_wdmchillsout//best0911_3.pdf}
-	\caption{\label{fig:best_realizations} Dark matter halo {\textit{effective multi-plane convergence}} maps for some of the highest-ranked realizations for the subset of quads B1422, WGD J0405, WFI 2033, and RX J0911, each of which has flux ratios inconsistent with smooth lens models. The defintion of the {\textit{effective multi-plane convergence}} takes into account the non-linear effects present in multi-plane lensing, and is defined with respect to the mean dark matter density in the Universe such that some regions are underdense (blue), while other regions (specifically, dark matter halos) are over-dense (red). The subhalo mass function normalization, line of sight normalization, halo mass and half-mode mass are displayed for each realization. Green text/circles denote observed image positions and fluxes, while black text/crosses denote the model positions and fluxes. The forward-model data sets fit the image positions and fluxes to within the measurement uncertainties. }
+	\caption[Maps of the \textit{effective multi-plane convergence} for several realizations of dark matter halos]{\label{fig:best_realizations} Dark matter halo {\textit{effective multi-plane convergence}} maps for some of the highest-ranked realizations for the subset of quads B1422, WGD J0405, WFI 2033, and RX J0911, each of which has flux ratios inconsistent with smooth lens models. The defintion of the {\textit{effective multi-plane convergence}} takes into account the non-linear effects present in multi-plane lensing, and is defined with respect to the mean dark matter density in the Universe such that some regions are underdense (blue), while other regions (specifically, dark matter halos) are over-dense (red). The subhalo mass function normalization, line of sight normalization, halo mass and half-mode mass are displayed for each realization. Green text/circles denote observed image positions and fluxes, while black text/crosses denote the model positions and fluxes. The forward-model data sets fit the image positions and fluxes to within the measurement uncertainties. }
 \end{figure*}	
 \begin{figure*}
 	\includegraphics[clip,trim=1.5cm 1.6cm 1cm
 	1cm,width=0.95\textwidth,keepaspectratio]{./figures_wdmchillsout/joint0435.pdf}
-	\caption{\label{fig:0435inf} Joint posterior distribution for a subset of $\qmac$ and $\qsub$ parameters for the system HE0435. We display the normalization of the main deflector lens model $b_{\rm{macro}}$, the external shear strength and position angle $\gamma_{\rm{ext}}$ and $\theta_{\rm{ext}}$, the deflector ellipticity $\epsilon$, the power-law slope of the main deflector mass profile $\gamma_{\rm{macro}}$, the Einstein radius of the satellite galaxy $G2_{\theta_E}$, the normalization of the subhalo mass function $\Sigma_{\rm{sub}}$, and the half-mode mass $\mhm$. We simultaneously sample the distributions of these parameters to account for covariance between the macromodel and the dark matter hyper-parameters $\qsub$. Vertical lines denote $95\%$ confidence intervals.}
+	\caption[Joint posterior distribution of model parameters for HE0435]{\label{fig:0435inf} Joint posterior distribution for a subset of $\qmac$ and $\qsub$ parameters for the system HE0435. We display the normalization of the main deflector lens model $b_{\rm{macro}}$, the external shear strength and position angle $\gamma_{\rm{ext}}$ and $\theta_{\rm{ext}}$, the deflector ellipticity $\epsilon$, the power-law slope of the main deflector mass profile $\gamma_{\rm{macro}}$, the Einstein radius of the satellite galaxy $G2_{\theta_E}$, the normalization of the subhalo mass function $\Sigma_{\rm{sub}}$, and the half-mode mass $\mhm$. We simultaneously sample the distributions of these parameters to account for covariance between the macromodel and the dark matter hyper-parameters $\qsub$. Vertical lines denote $95\%$ confidence intervals.}
 \end{figure*}	
 \begin{figure*}
 	\includegraphics[clip,trim=1.5cm 1.6cm 1cm
 	1cm,width=0.95\textwidth,keepaspectratio]{./figures_wdmchillsout//joint2033.pdf}
-	\caption{\label{fig:02033inf} Joint posterior distribution for a subset of $\qmac$ and $\qsub$ parameters for the system WFI 2033. The parameters are the same as in Figure \ref{fig:0435inf}. In addition to the main deflector we model two additional nearby galaxies, with Einstein radii $G2_{\theta_E(1)}$ and $G2_{\theta_E(2)}$. We show the distributions of the Einstein radius for the larger nearby galaxy ($G2_{\theta_E(2)}$), whose position we correct for foreground lensing effects (see Section \ref{ssec:satgals}). }
+	\caption[Joint posterior distribution of model parameters for WFI 2033]{\label{fig:02033inf} Joint posterior distribution for a subset of $\qmac$ and $\qsub$ parameters for the system WFI 2033. The parameters are the same as in Figure \ref{fig:0435inf}. In addition to the main deflector we model two additional nearby galaxies, with Einstein radii $G2_{\theta_E(1)}$ and $G2_{\theta_E(2)}$. We show the distributions of the Einstein radius for the larger nearby galaxy ($G2_{\theta_E(2)}$), whose position we correct for foreground lensing effects (see Section \ref{ssec:satgals}). }
 \end{figure*}	
 
 \begin{figure*}
 	\includegraphics[clip,trim=1.5cm 1.2cm 1cm
 	1cm,width=0.95\textwidth,keepaspectratio]{./figures_wdmchillsout//joint0911.pdf}
-	\caption{\label{fig:0911inf} Joint posterior distribution for a subset of $\qmac$ and $\qsub$ parameters for the system RX J0911. The parameters are the same as in Figure \ref{fig:0435inf}. }
+	\caption[Joint posterior distribution of model parameters for RXJ 0911]{\label{fig:0911inf} Joint posterior distribution for a subset of $\qmac$ and $\qsub$ parameters for the system RX J0911. The parameters are the same as in Figure \ref{fig:0435inf}. }
 \end{figure*}	
 
 \subsection{Lens-specific modeling for RX J0911+0551 and WGD 2038-4008}
@@ -435,15 +435,15 @@ By simultaneously sampling the lens macromodel and dark matter hyper-parameters,
 \begin{figure*}
 	\includegraphics[clip,trim=0.2cm 0cm 0.5cm
 	0.5cm,width=0.95\textwidth,keepaspectratio]{./figures_wdmchillsout/joint_inference.pdf}
-	\caption{\label{fig:mainresult} Marginal and joint posterior distributions for the dark matter hyper-parameters $\delta_{\rm{los}}$, $\alpha$, $\Sigma_{\rm{sub}}$, and $\mhm$, which represent the overall scaling of the line of sight halo mass function, the logarithmic slope of the subhalo mass function, the global normalization of the subhalo mass function that accounts for evolution with halo mass and redshfit (see Equation \ref{eqn:subhalomfunc}), and the half-mode mass $\mhm$ relevant to WDM models. Contours show $68\%$ and $95\%$ confidence intervals, while the dot-dashed lines on the marginal distributions show the $95\%$ confidence intervals.}
+	\caption[Joint posterior distribution of dark matter hyper-parameters]{\label{fig:mainresult} Marginal and joint posterior distributions for the dark matter hyper-parameters $\delta_{\rm{los}}$, $\alpha$, $\Sigma_{\rm{sub}}$, and $\mhm$, which represent the overall scaling of the line of sight halo mass function, the logarithmic slope of the subhalo mass function, the global normalization of the subhalo mass function that accounts for evolution with halo mass and redshfit (see Equation \ref{eqn:subhalomfunc}), and the half-mode mass $\mhm$ relevant to WDM models. Contours show $68\%$ and $95\%$ confidence intervals, while the dot-dashed lines on the marginal distributions show the $95\%$ confidence intervals.}
 \end{figure*}	
 
-\begin{wrapfigure}[30]{L}{0.5\textwidth}
+\begin{figure}
+	\centering
 	\includegraphics[clip,trim=3cm 0.3cm 3cm
-	0cm,width=0.45\textwidth,keepaspectratio]{./figures_wdmchillsout/CDM_joint.pdf}
-	\captionsetup{width=.45\textwidth}
-	\caption{\label{fig:cdmsigmasub} Inference on the global normalization of the subhalo mass function $\Sigma_{\rm{sub}}$ assuming CDM, marginalized over the logarithmic slope $\alpha$ and uncertainty in the overall amplitude of the line of sight halo mass function $\delta_{\rm{los}}$. The blue dashed lines shows the mean of the marginal distribution, while black solid (dashed) lines represent $68\%$ and $95 \%$ confidence intervals. The contours in the joint distribution also represent $68\%$ and $95 \%$ confidence intervals.}
-\end{wrapfigure}	
+	0cm,width=0.75\textwidth,keepaspectratio]{./figures_wdmchillsout/CDM_joint.pdf}
+	\caption[Posterior distribution of the normalization of the SHMF assuming CDM]{\label{fig:cdmsigmasub} Inference on the global normalization of the subhalo mass function $\Sigma_{\rm{sub}}$ assuming CDM, marginalized over the logarithmic slope $\alpha$ and uncertainty in the overall amplitude of the line of sight halo mass function $\delta_{\rm{los}}$. The blue dashed lines shows the mean of the marginal distribution, while black solid (dashed) lines represent $68\%$ and $95 \%$ confidence intervals. The contours in the joint distribution also represent $68\%$ and $95 \%$ confidence intervals.}
+\end{figure}	
 
 \subsection{Constraints on the free-streaming length of dark matter}
 \label{ssec:mainresults}
@@ -531,18 +531,19 @@ In Figures \ref{fig:convergence} and \ref{fig:convergence_CDM}, we compare poste
 \begin{figure*}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.95\textwidth,keepaspectratio]{./figures_wdmchillsout/convergence_test.pdf}
-	\caption{\label{fig:convergence} A convergence test of the posterior distributions. By discarding one-third of the forward model samples and applying the same rejection criterion to those that remain, we verify the inference obtained through the ABC rejection algorithm is robust. }
+	\caption[Convergence test of the posteriors]{\label{fig:convergence} A convergence test of the posterior distributions. By discarding one-third of the forward model samples and applying the same rejection criterion to those that remain, we verify the inference obtained through the ABC rejection algorithm is robust. }
 \end{figure*}
 
 \begin{figure*}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.95\textwidth,keepaspectratio]{./figures_wdmchillsout/CDM_convergencetest.pdf}
-	\caption{\label{fig:convergence_CDM} A convergence test of the posterior distributions assuming CDM. Like Figure \ref{fig:convergence}, one-third of the samples are discarded and the same number of realizations are accepted into the posterior.}
+	\caption[Convergence test of the posteriors assuming CDM]{\label{fig:convergence_CDM} A convergence test of the posterior distributions assuming CDM. Like Figure \ref{fig:convergence}, one-third of the samples are discarded and the same number of realizations are accepted into the posterior.}
 \end{figure*}
 
 \section{Appendix B: Obtaining deflector redshifts}
 \label{app:B}
 \begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.2\textwidth,keepaspectratio]{./figures_wdmchillsout/photoz_0408.pdf}
 	\includegraphics[clip,trim=0cm 0cm 0cm
@@ -555,12 +556,13 @@ In Figures \ref{fig:convergence} and \ref{fig:convergence_CDM}, we compare poste
 	0cm,width=.2\textwidth,keepaspectratio]{./figures_wdmchillsout/photoz_1606.pdf}
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.2\textwidth,keepaspectratio]{./figures_wdmchillsout/photoz_0405.pdf}
-	\caption{\label{fig:photozs} PDFs for main deflector redshifts computed with the software {\textsc{eazy}} and photometry from \cite{Shajib++18}, restricting the photometry templates to those of early-type galaxies. Top rows show four applications of this procedure to quads with measured spectroscopic redshifts (red dotted lines). The bottom row shows the results of this procedure, using the same photometry and template assumptions, applied to the quads PS J1606 and WGD J0405, which do not have spectroscopic redshift measurements.}
+	\caption[Distributions of main deflector redshifts]{\label{fig:photozs} PDFs for main deflector redshifts computed with the software {\textsc{eazy}} and photometry from \cite{Shajib++18}, restricting the photometry templates to those of early-type galaxies. Top rows show four applications of this procedure to quads with measured spectroscopic redshifts (red dotted lines). The bottom row shows the results of this procedure, using the same photometry and template assumptions, applied to the quads PS J1606 and WGD J0405, which do not have spectroscopic redshift measurements.}
 \end{figure}	
 \begin{figure}
+	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.3\textwidth,keepaspectratio]{./figures_wdmchillsout/photoz_2026.pdf}
-	\caption{\label{fig:2026z} The PDF for the deflector redshift of WFI 2026 obtained by assuming a velocity dispersion of $240 \pm 30 \ \rm{km} \ \rm{s^{-1}}$ and a roughly isothermal mass profile. }
+	\caption[Distribution of lens redshift for WFI 2026]{\label{fig:2026z} The PDF for the deflector redshift of WFI 2026 obtained by assuming a velocity dispersion of $240 \pm 30 \ \rm{km} \ \rm{s^{-1}}$ and a roughly isothermal mass profile. }
 \end{figure}
 The quads PS J1606 and WGD J0405 do not have measured spectroscopic redshifts, so we use photometry from \cite{Shajib++18} to obtain photometric redshift estimates. The photometry from \cite{Shajib++18} comes in three bands: F160W, F814W, and F475X with magnitude uncertainties of $0.1-0.3$ dex. We use the software package {\tt{eazy}} \cite{Brammer++08}, and restrict the templates to only consider the SEDs for early-type galaxies, which are $90\%$ of galaxies acting as strong lenses. We verify this procedure is accurate by applying it to other deflectors in sample analyzed by \cite{Shajib++18} that have measured spectroscopic redshifts, and  then proceed to derive PDFs for deflector redshifts in the systems PS J1606 and WGD J0405. 
 
@@ -581,7 +583,7 @@ We summarize the data used in this analysis, and the references for the astromet
 
 \begin{table*}
 	\centering
-	\caption{The data used in this analysis. Letters A-D correspond to the lensed images, while G is the galaxy light centroid. The priors sampled for the satellite galaxies or nearby deflectors are quoted in Table \ref{tab:lenspriors}. Discovery papers are marked with a $^{\dagger}$. }
+	\caption[Summary of data]{The data used in this analysis. Letters A-D correspond to the lensed images, while G is the galaxy light centroid. The priors sampled for the satellite galaxies or nearby deflectors are quoted in Table \ref{tab:lenspriors}. Discovery papers are marked with a $^{\dagger}$. }
 	\label{tab:datasummary}
 	\begin{tabular}{lcccr} % four columns, alignment for each
 		\hline
@@ -611,21 +613,21 @@ We summarize the data used in this analysis, and the references for the astromet
 		& D & $0.941 \pm 0.01$ & $-0.797 \pm 0.01$ & - \\
 		& G & $0.734 \pm 0.01$ & $-0.649 \pm 0.01$& - \\ 
 		\hline
+	\end{tabular}
+\end{table*}
+\begin{table*}
+	\centering
+	\caption[Summary of data (cont.)]{Table \ref{tab:datasummary} cont.}
+	\label{tab:datasummarycont}
+	\begin{tabular}{lcccr} 
+		\hline
+		Lens & Image & dRA & dDec & NL flux \\
+		\hline
 		PS J1606-2333 & A & $1.622 \pm 0.003$& $0.589 \pm 0.003$ & $1.00 \pm 0.03$\\
 		\cite{Nierenberg++19}& B & $0 \pm 0.003$& $0 \pm 0.003$ & $1.00 \pm 0.03$\\
 		\cite{Shajib++18}& C & $0.832 \pm 0.003$& $-0.316 \pm 0.003$ & $0.59 \pm 0.02$ \\
 		$^{\dagger}$\cite{Lemon++18}& D  & $0.495 \pm 0.003$& $0.739 \pm 0.003$ & $0.79 \pm 0.02$ \\
 		& G  & $0.784 \pm 0.05$& $0.211 \pm 0.05$ & - \\
-		\hline
-	\end{tabular}
-\end{table*}
-\begin{table*}
-	\centering
-	\caption{Table \ref{tab:datasummary} cont.}
-	\label{tab:datasummarycont}
-	\begin{tabular}{lcccr} 
-		\hline
-		Lens & Image & dRA & dDec & NL flux \\
 		\hline
 		WFI 2026-4536 & A & $0.164 \pm 0.003$& $-1.428 \pm 0.003$ & $1.00 \pm 0.02$ \\
 		\cite{Nierenberg++19}& B & $0.417\pm 0.003$& $-1.213 \pm 0.003$ & $0.75 \pm 0.02$ \\

@@ -53,7 +53,7 @@ This paper is structured as follows. Section \ref{sec:ABC} poses the problem of 
 \begin{landscape}
 \begin{table*}
 	\centering
-	\caption{Definitions and descriptions for parameters relevant to Equation \ref{eqn:posterior3}}
+	\caption[Summary of model parameters]{Definitions and descriptions for parameters relevant to Equation \ref{eqn:posterior3}}
 	\label{tab:notation}
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
@@ -172,8 +172,8 @@ where the summation runs over the three flux ratios of the $n$th lens, making us
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=.5\textwidth,keepaspectratio]{./figures_ABCforward/mass_function_2.pdf}
-	\caption{\label{fig:mass_function} The subhalo mass function of Equation \ref{eqn:wdm_massfunc} which we use to generate substructure realizations. In the figure we vary the half-mode mass $m_{\rm{hm}}$ with fixed normalization $A_0 = 1.2 \times 10^8 \msun^{-1}$. We generate subhalo populations in such a way that the amplitude of a CDM-like and a WDM-like mass functions are identical for masses $m \gg m_{\rm{hm}}$, rendering subhalos in projection to a radius of 18.6 kpc.}
+	0cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/mass_function_2.pdf}
+	\caption[Example plot of the subhalo mass function]{\label{fig:mass_function} The subhalo mass function of Equation \ref{eqn:wdm_massfunc} which we use to generate substructure realizations. In the figure we vary the half-mode mass $m_{\rm{hm}}$ with fixed normalization $A_0 = 1.2 \times 10^8 \msun^{-1}$. We generate subhalo populations in such a way that the amplitude of a CDM-like and a WDM-like mass functions are identical for masses $m \gg m_{\rm{hm}}$, rendering subhalos in projection to a radius of 18.6 kpc.}
 \end{figure}
 
 \section{Simulation Setup}
@@ -241,16 +241,16 @@ examining specific cases of $\delta = 0.02$ $\delta = 0.04$ and $\delta = 0.08$,
 For reference, current techniques using measurements of narrow-line fluxes achieve precision of roughly $4-6\%$ \cite{Nierenberg++14,Nierenberg++17}. The $8\%$ errors can therefore be interpreted as pessimistic case, with errors induced by the use of a simplified macromodel compounding measurement errors, while $2\%$ simulates an optimistic future precision. The $4\%$ curve serves to illustrate how the bounds evolve between these two extremes. Finally, we add measurement errors of 3 m.a.s. to the mock image positions, typical of astrometric uncertainties with current instruments.
 \begin{figure}
 	\centering
-	\includegraphics[clip,trim=4.2cm 3.2cm 2.2cm
-	2.7cm,width=.8\textwidth,keepaspectratio]{./figures_ABCforward/schematic.pdf}
-	\caption{\label{fig:visualization2} This figure presents an illustration of the forward modeling analysis.  We use one realization of substructure to create mock data, as shown in the panel outlined in green (left). Lensed images (blue) have sizes corresponding to their flux, while subhalos (black) have sizes corresponding to $M_{200}$.  We compute flux ratios with respect to the middle image in the triplet; $f_1$ denotes the image in the upper right, while $f_2$ and $f_3$ denote images in the left and right of the triplet, respectively. We then discriminate between different parameters describing the subhalo mass function by drawing many substructure realizations from proposal mass functions, three examples of which are shown here (panels outlined in black). For each realization we re-optimize the macromodel and compute the summary statistic $S\left(\fobs,\fmods\right)$ from Equation \ref{eqn:summary_stat}, which we use to accept or reject the realization and the parameters describing the mass function it came from. The procedure visualized here is repeatedly applied in the full analysis shown in Figure \ref{fig:visualization}. 
+	\includegraphics[clip,trim=4cm 3.2cm 3cm
+	2.7cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/schematic.pdf}
+	\caption[Schematic summary of forward model]{\label{fig:visualization2} This figure presents an illustration of the forward modeling analysis.  We use one realization of substructure to create mock data, as shown in the panel outlined in green (left). Lensed images (blue) have sizes corresponding to their flux, while subhalos (black) have sizes corresponding to $M_{200}$.  We compute flux ratios with respect to the middle image in the triplet; $f_1$ denotes the image in the upper right, while $f_2$ and $f_3$ denote images in the left and right of the triplet, respectively. We then discriminate between different parameters describing the subhalo mass function by drawing many substructure realizations from proposal mass functions, three examples of which are shown here (panels outlined in black). For each realization we re-optimize the macromodel and compute the summary statistic $S\left(\fobs,\fmods\right)$ from Equation \ref{eqn:summary_stat}, which we use to accept or reject the realization and the parameters describing the mass function it came from. The procedure visualized here is repeatedly applied in the full analysis shown in Figure \ref{fig:visualization}. 
 	}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[clip,trim=4cm 5cm .5cm
-	5cm,width=.6\textwidth,keepaspectratio]{./figures_ABCforward/forward_model_graph.pdf}
-	\caption{\label{fig:visualization} A schematic overview of the forward model used to compare flux ratios in the simulated data sets to flux ratios derived from substructure realizations drawn from $\qsub$.}  
+	\includegraphics[clip,trim=3.cm 5cm 1.cm
+	5cm,width=.65\textwidth,keepaspectratio]{./figures_ABCforward/forward_model_graph.pdf}
+	\caption[Schematic overview of the forward model]{\label{fig:visualization} A schematic overview of the forward model used to compare flux ratios in the simulated data sets to flux ratios derived from substructure realizations drawn from $\qsub$.}  
 \end{figure}
 \subsection{Constraining the subhalo mass function}
 \label{ssec:to_posterior}
@@ -272,10 +272,10 @@ Based on the method we outlined in the previous two sections, we are able to qua
 
 \begin{figure}
 	\includegraphics[clip,trim=0cm 0cm 0.3cm
-	0cm,width=.45\textwidth,keepaspectratio]{./figures_ABCforward/nfw_summed_cusp_edited.pdf}
+	0cm,width=.48\textwidth,keepaspectratio]{./figures_ABCforward/nfw_summed_cusp_edited.pdf}
 	\includegraphics[clip,trim=0.2cm 0cm .3cm
-	0cm,width=.45\textwidth]{./figures_ABCforward/nfw_summed_tail_cusp.pdf}
-	\caption{\label{fig:fluxratios} Cumulative distributions of flux ratio anomalies summed in quadrature for different subhalo mass functions with varying normalization (grey, black), and identical normalizations but varying $m_{\rm{hm}}$ (black, blue, red, magenta). The lower panel shows a zoom-in of the long, low probability tail of the distributions. Models with higher normalization (black vs. grey) produce more frequent flux ratio anomalies. Models with high $m_{\rm{hm}}$ produce less frequent anomalies than the black curve with $m_{\rm{hm}} = 0$ for flux ratio anomalies $<1.4$.}
+	0cm,width=.48\textwidth]{./figures_ABCforward/nfw_summed_tail_cusp.pdf}
+	\caption[Cumulative distribution of flux ratio anomalies for different subhalo mass functions]{\label{fig:fluxratios} Cumulative distributions of flux ratio anomalies summed in quadrature for different subhalo mass functions with varying normalization (grey, black), and identical normalizations but varying $m_{\rm{hm}}$ (black, blue, red, magenta). The lower panel shows a zoom-in of the long, low probability tail of the distributions. Models with higher normalization (black vs. grey) produce more frequent flux ratio anomalies. Models with high $m_{\rm{hm}}$ produce less frequent anomalies than the black curve with $m_{\rm{hm}} = 0$ for flux ratio anomalies $<1.4$.}
 \end{figure}
 
 In Figure \ref{fig:fluxratios}, we plot the cumulative distribution of flux ratio anomalies for $10,000$ substructure realizations. Several trends emerge which help to understand the signal coming from substructure in image flux ratios.
@@ -294,9 +294,9 @@ Before adding simulated errors to the measured flux ratios, as will be present i
 	}
 	\centerline{
 		\includegraphics[clip,trim=0cm 0cm 0cm
-		0cm,width=.45\textwidth,keepaspectratio]{./figures_ABCforward/marginal_mhm_30lens_0025_8.pdf}
+		0cm,width=.48\textwidth,keepaspectratio]{./figures_ABCforward/marginal_mhm_30lens_0025_8.pdf}
 	}
-	\caption{\label{fig:wdm_inf_noerror}
+	\caption[Posterior distribution for the half-mode mass inferred from WDM mock datasets]{\label{fig:wdm_inf_noerror}
 		(Top) Joint posterior distribution for data with input $\left(A_0,m_{\rm{hm}}\right) = \left(1.04\times 10^8 \msun^{-1},10^8 \msun \right)$, marked by red lines. The closing of the $1\sigma$ contour from the bottom, ruling out CDM mass functions at $2\sigma$, demonstrates the sensitivity of the flux ratios, and this method, for probing substructure on scales $M_{200} \approx 10^{6.5} \msun$.
 		(Bottom) Marginalized constraints on $m_{\rm{hm}}$.  The $2 \sigma$ bounds correspond to $10^{7} \msun < m_{\rm{hm}} < 10^{8.7} \msun$.}
 \end{figure}
@@ -306,8 +306,8 @@ First, Figure \ref{fig:wdm_inf_noerror} shows the joint posterior distribution f
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm .5cm .3cm
-	.5cm,width=.8\textwidth,keepaspectratio]{./figures_ABCforward/joint_varynlens_noerrors.pdf}
-	\caption{\label{fig:cdm_inf_noerror} Posterior distribution for a CDM-like mass function with input mass function parameters $\left(A_0,m_{\rm{hm}}\right) = \left(8.2 \times 10^7 \msun^{-1},0\right)$. In this idealized simulation, we do not add measurement errors or any other perturbations to fluxes in the simulated data sets. Effectively, the only unknown variables are $A_0$ and $m_{\rm{hm}}$, which describe the subhalo mass function. In such an idealized case, flux ratios probe scales below $10^{6.5} \msun$, ruling out WDM models with $m_{\rm{hm}} > 10^{6.1} \msun$ and $m_{\rm{hm}} > 10^{6.4}\msun$ at 1 and 2$\sigma$, respectively. For reference, grey solid and dashed lines show the $2\sigma$ bounds on a WDM particle mass from \cite{Viel13} and \cite{Birrer++17a}, respectively.}
+	.5cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/joint_varynlens_noerrors.pdf}
+	\caption[Posterior distribution inferred from CDM mock datasets with no measurement errors]{\label{fig:cdm_inf_noerror} Posterior distribution for a CDM-like mass function with input mass function parameters $\left(A_0,m_{\rm{hm}}\right) = \left(8.2 \times 10^7 \msun^{-1},0\right)$. In this idealized simulation, we do not add measurement errors or any other perturbations to fluxes in the simulated data sets. Effectively, the only unknown variables are $A_0$ and $m_{\rm{hm}}$, which describe the subhalo mass function. In such an idealized case, flux ratios probe scales below $10^{6.5} \msun$, ruling out WDM models with $m_{\rm{hm}} > 10^{6.1} \msun$ and $m_{\rm{hm}} > 10^{6.4}\msun$ at 1 and 2$\sigma$, respectively. For reference, grey solid and dashed lines show the $2\sigma$ bounds on a WDM particle mass from \cite{Viel13} and \cite{Birrer++17a}, respectively.}
 \end{figure}
 
 In a second simulation, we use a data set composed of 180 systems with an input mass function with $\left(A_0,m_{\rm{hm}}\right) = \left(8.2\times 10^7 \msun^{-1},0 \right)$. Figure \ref{fig:cdm_inf_noerror} shows the joint posterior distribution on this data set as the number of lenses is increased. We interpret the $2 \sigma$ bound of $10^{6.4} \msun$ as the best one could do with 180 systems. \footnote{In each of the simulations with mock data sets containing CDM mass functions, we only quote the upper bound because the $2 \sigma$ lower bound is set by the limits of the prior assigned to $m_{\rm{hm}}$.} As we show in the next section, these bounds weaken significantly under flux ratio errors of $2\%$, $4\%$ and $8\%$, which mimic the signal in flux ratios produced by the smallest subhalos, or by subhalos far from an image.
@@ -319,21 +319,21 @@ In a second simulation, we use a data set composed of 180 systems with an input 
 	\centering
 	\includegraphics[clip,trim=0cm .5cm .3cm
 	.5cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/joint_180_4_8_errors.pdf}
-	\caption{\label{fig:cdm_inf_error} Similar to Figure \ref{fig:cdm_inf_noerror}, but in this case the fluxes in the mock data sets receive $4\%$ and $8\%$ uncorrelated Gaussian errors. On their own, these errors look like substructure, biasing the inference to models with more subhalos. However, we are able to account for this uncertainty by introducing perturbations to the fluxes in the forward model that match those applied to the mock data. Adding noise to the fluxes washes out the signal from the smallest subhalos, and the $2\sigma$ constraining power on $m_{\rm{hm}}$ is diminished by over an order of magnitude. This figure shows the result of a single draw of Gaussian errors in the fluxes. In Figure \ref{fig:nlens_vs_2sigma}, we compute $2\sigma$ bounds on $m_{\rm{hm}}$ averaged over many draws of these errors.}
+	\caption[Posterior distribution inferred from CDM mock datasets with measurement errors]{\label{fig:cdm_inf_error} Similar to Figure \ref{fig:cdm_inf_noerror}, but in this case the fluxes in the mock data sets receive $4\%$ and $8\%$ uncorrelated Gaussian errors. On their own, these errors look like substructure, biasing the inference to models with more subhalos. However, we are able to account for this uncertainty by introducing perturbations to the fluxes in the forward model that match those applied to the mock data. Adding noise to the fluxes washes out the signal from the smallest subhalos, and the $2\sigma$ constraining power on $m_{\rm{hm}}$ is diminished by over an order of magnitude. This figure shows the result of a single draw of Gaussian errors in the fluxes. In Figure \ref{fig:nlens_vs_2sigma}, we compute $2\sigma$ bounds on $m_{\rm{hm}}$ averaged over many draws of these errors.}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm .5cm .3cm
 	.5cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/joint_120_4_8_errors_HN.pdf}
-	\caption{\label{fig:cdm_inf_error_highnorm} Similar to Figure \ref{fig:cdm_inf_error}, but an inference performed on a dataset with a subhalo mass function normalization corresponding to the expected mass fraction in substructure if there is no tidal disruption of subhalos within the host scale radius (see Appendix A). The higher abundance of substructures in this scenario results in a higher probability of observing flux perturbation larger than the effective detection threshold, which is determined by the precision of the image fluxes. Neither the high nor low normalization scenarios includes the expected boost from line of sight structure which we will consider in a future work.}
+	\caption[Posterior distribution inferred from CDM mock datasets with as a function of the SHMF normalization]{\label{fig:cdm_inf_error_highnorm} Similar to Figure \ref{fig:cdm_inf_error}, but an inference performed on a dataset with a subhalo mass function normalization corresponding to the expected mass fraction in substructure if there is no tidal disruption of subhalos within the host scale radius (see Appendix A). The higher abundance of substructures in this scenario results in a higher probability of observing flux perturbation larger than the effective detection threshold, which is determined by the precision of the image fluxes. Neither the high nor low normalization scenarios includes the expected boost from line of sight structure which we will consider in a future work.}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
 	0cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/nlens_vs_2sigma.pdf}
-	\caption{\label{fig:nlens_vs_2sigma} Curves show the dependence of the $2\sigma$ bounds on $m_{\rm{hm}}$, and the mass $m$ of a corresponding thermal relic dark matter particle, as a function of the number of lenses. For each plotted point, we randomly sample different combinations of $N$ lenses, each with a random draw of flux errors of 2, 4, and 8 percent. We iterate this procedure 200 times, and compute the mean of the two sigma bounds over the 200 iterations . %Introducing even very small $2\%$ variations in the fluxes results in a dramatic loss of constraining power over $m_{\rm{hm}}$. 
+	\caption[Projected constraints on the half-mode mass as a function of the number of lenses and measurement uncertainties]{\label{fig:nlens_vs_2sigma} Curves show the dependence of the $2\sigma$ bounds on $m_{\rm{hm}}$, and the mass $m$ of a corresponding thermal relic dark matter particle, as a function of the number of lenses. For each plotted point, we randomly sample different combinations of $N$ lenses, each with a random draw of flux errors of 2, 4, and 8 percent. We iterate this procedure 200 times, and compute the mean of the two sigma bounds over the 200 iterations . %Introducing even very small $2\%$ variations in the fluxes results in a dramatic loss of constraining power over $m_{\rm{hm}}$. 
 		With 180 lenses, the $2\sigma$ bound on $m_{\rm{hm}}$ is $10^{6.4} \msun$, $10^{7.5} \msun$, $10^{8} \msun$, $10^{8.4} \msun$ for fluxes with errors controlled at $0\%$, $2\%$, $4\%$, and $8\%$, respectively. For the higher normalization case, (dotted curves) the signal to noise ratio in the data is higher, allowing tighter constraints for a fixed sample size. For reference, horizontal lines show bounds on the mass of a thermal from the Lyman-$\alpha$ forest \cite{Viel13} and an analysis of the strong lens RXJ-1131 \cite{Birrer++17a}.}
 \end{figure}
 
@@ -460,8 +460,8 @@ To identify image configurations, we adopt the following classification scheme b
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=.15cm .5cm 0cm
-	0cm,width=.45\textwidth,keepaspectratio]{./figures_ABCforward/joint_imgconfigs60_noerrors_kde2.pdf}
-	\caption{\label{fig:img_configs} Response of cusp, fold and cross image configurations to small scale structure. For a fixed number of lenses, cusps yield the strongest constraints, followed by folds and crosses.}
+	0cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/joint_imgconfigs60_noerrors_kde2.pdf}
+	\caption[Constraints from mock lenses with different image configurations]{\label{fig:img_configs} Response of cusp, fold and cross image configurations to small scale structure. For a fixed number of lenses, cusps yield the strongest constraints, followed by folds and crosses.}
 \end{figure} 
 
 
@@ -481,8 +481,8 @@ Using this equation instead of Equation \ref{eqn:summary_stat}, we perform an in
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=.15cm .5cm 0cm
-	0cm,width=.45\textwidth,keepaspectratio]{./figures_ABCforward/joint_varynlens_noerrors_otherstat.pdf}
-	\caption{\label{fig:other_stat} Inference made using the statistic in defined in Equation \ref{eqn:stat2}, rather than Equation \ref{eqn:summary_stat}.}
+	0cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/joint_varynlens_noerrors_otherstat.pdf}
+	\caption[Inference on mock data from alternative summary statistics]{\label{fig:other_stat} Inference made using the statistic in defined in Equation \ref{eqn:stat2}, rather than Equation \ref{eqn:summary_stat}.}
 \end{figure} 
 
 \section{Appendix D: Convergence of ABC simulations and posteriors}
@@ -490,8 +490,8 @@ Using this equation instead of Equation \ref{eqn:summary_stat}, we perform an in
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=.45\textwidth,keepaspectratio]{./figures_ABCforward/convergence_test.pdf}
-	\caption{\label{fig:convergence} A convergence test in which we discard half of the realizations before applying the acceptance criterion. Each distribution is composed of the samples from $\qsub$ associated with the lowest 1,800 summary statistics.}
+	0cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/convergence_test.pdf}
+	\caption[Convergence test of posteriors from mock data]{\label{fig:convergence} A convergence test in which we discard half of the realizations before applying the acceptance criterion. Each distribution is composed of the samples from $\qsub$ associated with the lowest 1,800 summary statistics.}
 \end{figure}
 To assess convergence of the ABC algorithm, we compare two inferences made on the same data set in which one has half the number of realizations as the other. To produce the black distribution, we retain the draws from $\qsub$ associated with the lowest 1,800 summary statistics. We then discard half of the realizations, and reject all but the lowest 1,800 summary statistics from the depleted simulation. Under-sampling by a factor of two, we recover the same bounds on $A_0$ and $m_{\rm{hm}}$ to a high degree of precision, indicating the inference made with $\approx 2000$ realizations per proposal $\qsub$ has converged.
 
@@ -500,8 +500,8 @@ To assess convergence of the ABC algorithm, we compare two inferences made on th
 \begin{figure}
 	\centering
 	\includegraphics[clip,trim=0cm 0cm 0cm
-	0cm,width=.48\textwidth,keepaspectratio]{./figures_ABCforward/varygamma_208.pdf}
-	\caption{\label{fig:plaw_slope} We test the effect of an incorrectly parameterizing the macromodel by generating mock data with non-isothermal ellipsoids, and modeling the data with an SIE in the forward model. The power law slope $\gamma$ is sampled from a Guassian with mean 2.08 and variance 0.2.}
+	0cm,width=.75\textwidth,keepaspectratio]{./figures_ABCforward/varygamma_208.pdf}
+	\caption[Effect of an incorrectly-parameterized mass profile]{\label{fig:plaw_slope} We test the effect of an incorrectly parameterizing the macromodel by generating mock data with non-isothermal ellipsoids, and modeling the data with an SIE in the forward model. The power law slope $\gamma$ is sampled from a Guassian with mean 2.08 and variance 0.2.}
 \end{figure}
 We test the effect of incorrectly parameterizing the macromodel by created datasets with non-isothermal power law ellipsoids, and fitting them with SIEs in the forward model. When generating mock lenses, we sample power law slopes from a Guassian distribution offset from isothermal at $\gamma = 2.08 \pm 0.2$, consistent with the findings of \cite{Shankar++17}, who find the power law slopes for massive ellipticals are consistently steeper than isothermal. The results of this exercise are shown in Figure \ref{fig:plaw_slope}. The effect of varying the power law slope in the data is seen to not significantly degrade the inference on $A_0$ and $m_{\rm{hm}}$, and therefore does not affect the precision of our forecast statements. 
 
