@@ -164,6 +164,7 @@ We render subhalos out to a maximum projected radius $3 R_{\rm{Ein}}$ and assign
 	\centering
 	\caption[Summary of model parameters]{Free parameters sampled in the forward model. Notation ${\mathcal{N}} \left(\mu, \sigma\right)$ indicates a Gaussian prior with mean $\mu$ and variance $\sigma$, and ${\mathcal{U}} \left(u_1, u_2\right)$ indicates a uniform prior between $u_1$ and $u_2$. Lens-specific priors are summarized in Table \ref{tab:lenspriors}. }
 	\label{tab:params}
+	\resizebox{\columnwidth}{!}{%
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
 		parameter & definition & prior\\
@@ -191,7 +192,7 @@ We render subhalos out to a maximum projected radius $3 R_{\rm{Ein}}$ and assign
 %		\\
 		$\delta f$ & image flux uncertainties & (lens specific)\\
 		\hline		
-	\end{tabular}
+	\end{tabular}}
 \end{table*}
 %\end{landscape}
 
@@ -267,14 +268,13 @@ We apply our analysis to a sample of eight quads, although additional systems ex
 
 Specifically, we do not include quads with main lensing galaxies that contain stellar disks, since accurate lens models for these systems require explicit modeling of the disk. This excludes the system J1330 presented by \citet{Nierenberg++19}. We also exclude HS 0810, a system with narrow-line flux measurements presented by \citet{Nierenberg++19} because the flux from the merging images becomes blended together for source sizes larger than 20 pc. This complicates our analysis, as our method for computing image fluxes with extended background sources cannot be applied to merging pairs when the images blur together. 
 
-\begin{landscape}
 \begin{table*}
 	\centering
 	\caption[Summary of lens properties]{A summary of deflector $z_d$ and source $z_s$ redshifts, and satellite galaxies included in the lens model for the quads in our sample. Galaxy positions prior marked by $^{*}$ denote observed locations, which may differ from the true physical location due to foreground lensing effects from the lens macromodel. We correct for foreground lensing effects in our inference pipeline (see Section \ref{ssec:satgals}). Satellite galaxy locations are quoted with respect to the light centroid of the main deflector (see Table \ref{tab:datasummary}). All priors on the satellite mass $G2_{\theta_E}$ are positive definite. The raised and lowered numbers around the deflector redshifts for PS J1606, WGD J0405, and WFI 2026 are the $68\%$ confidence intervals on the estimated lens redshifts (see Appendix \ref{app:B}), which we marginalize over.}
 	\label{tab:lenspriors}
 	\def\arraystretch{1.05}
 	\setlength\tabcolsep{0.04in}
-	
+	\resizebox{\columnwidth}{!}{%
 	\begin{tabular}{lccccccccr} % four columns, alignment for each
 		\hline
 		lens & $z_d$ & $z_s$ &$ \log_{10} M_{\rm{halo}}$ &$\gamma_{\rm{ext}}$ & $\rm{G2}_x$ & $\rm{G2}_y$ & $\rm{G2}_z$ & $\rm{G2}_{\theta_E}$\\
@@ -289,9 +289,8 @@ Specifically, we do not include quads with main lensing galaxies that contain st
 		&  &  &  & & $^{*}\mathcal{N}$$\left(-3.965, 0.025\right)^{*}$ & $^{*}\mathcal{N}$$\left(-0.025, 0.025\right)^{*}$  & $z_d+0.085$ &$\mathcal{N}$$\left(0.93, 0.05\right)$ \vspacing
 		WGD 2038-4008 & $0.23$ & $0.78$ & $\mathcal{N}$$ \left(13.4, 0.3\right)$ &$\mathcal{U}$$ \left(0.04, 0.12\right)$  &- & - & - & - \vspacing
 		\hline		
-	\end{tabular}
+	\end{tabular}}
 \end{table*}
-\end{landscape}
 
 \section{Physical assumptions and priors}
 \label{sec:assumptionsandpriors}
@@ -371,6 +370,10 @@ The lens-specific priors on satellite galaxies are summarized in Table \ref{tab:
 	0.5cm,,width=.29\textwidth,keepaspectratio]{./figures_wdmchillsout//best0405_2.pdf}
 	\includegraphics[clip,trim=1cm 2.3cm 0.3cm
 	2.2cm,width=.34\textwidth,keepaspectratio]{./figures_wdmchillsout//best0405_3.pdf}
+	\caption[Maps of the \textit{effective multi-plane convergence} for several realizations of dark matter halos]{\label{fig:best_realizations} Dark matter halo {\textit{effective multi-plane convergence}} maps for some of the highest-ranked realizations for the quads B1422 and WGD J0405, each of which has flux ratios inconsistent with smooth lens models. The defintion of the {\textit{effective multi-plane convergence}} takes into account the non-linear effects present in multi-plane lensing, and is defined with respect to the mean dark matter density in the Universe such that some regions are underdense (blue), while other regions (specifically, dark matter halos) are over-dense (red). The subhalo mass function normalization, line of sight normalization, halo mass and half-mode mass are displayed for each realization. Green text/circles denote observed image positions and fluxes, while black text/crosses denote the model positions and fluxes. The forward-model data sets fit the image positions and fluxes to within the measurement uncertainties. }
+\end{figure*}	
+
+\begin{figure*}
 	\includegraphics[clip,trim=0.8cm 1cm 0.5cm
 	0.5cm,width=.29\textwidth,keepaspectratio]{./figures_wdmchillsout//best2033_1.pdf}
 	\includegraphics[clip,trim=0.8cm 1cm 0.5cm
@@ -383,8 +386,9 @@ The lens-specific priors on satellite galaxies are summarized in Table \ref{tab:
 	0.5cm,,width=.29\textwidth,keepaspectratio]{./figures_wdmchillsout//best0911_2.pdf}
 	\includegraphics[clip,trim=1cm 2.3cm 0.3cm
 	2.2cm,width=.34\textwidth,keepaspectratio]{./figures_wdmchillsout//best0911_3.pdf}
-	\caption[Maps of the \textit{effective multi-plane convergence} for several realizations of dark matter halos]{\label{fig:best_realizations} Dark matter halo {\textit{effective multi-plane convergence}} maps for some of the highest-ranked realizations for the subset of quads B1422, WGD J0405, WFI 2033, and RX J0911, each of which has flux ratios inconsistent with smooth lens models. The defintion of the {\textit{effective multi-plane convergence}} takes into account the non-linear effects present in multi-plane lensing, and is defined with respect to the mean dark matter density in the Universe such that some regions are underdense (blue), while other regions (specifically, dark matter halos) are over-dense (red). The subhalo mass function normalization, line of sight normalization, halo mass and half-mode mass are displayed for each realization. Green text/circles denote observed image positions and fluxes, while black text/crosses denote the model positions and fluxes. The forward-model data sets fit the image positions and fluxes to within the measurement uncertainties. }
-\end{figure*}	
+	\caption[Maps of the \textit{effective multi-plane convergence} for several realizations of dark matter halos cont.]{\label{fig:best_realizations2} Same as Figure \ref{fig:best_realizations} for the systems WFI 2033-4723 and RX J0911+0551.}
+\end{figure*}
+
 \begin{figure*}
 	\includegraphics[clip,trim=1.5cm 1.6cm 1cm
 	1cm,width=0.95\textwidth,keepaspectratio]{./figures_wdmchillsout/joint0435.pdf}

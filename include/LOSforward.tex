@@ -215,11 +215,12 @@ where the subscript (13) refers to the assumed halo mass of $10^{13} \msun$.  We
 We derive a projected mass density in subhalos by integrating Equation \ref{eqn:submfunc2} over mass, and find values of $\Sigma_{\rm{sub}} \sim 0.01-0.02 \ \rm{kpc^{-2}}$ yield surface mass densities in substructure similar to those derived in simulations of early-type galaxy halos of $10^7 \msun \rm{kpc^{-2}}$ with a pivot mass of $m_0 = 10^{8} \msun$ \citep{Fiacconi++16}. This normalization in principle depends on the severity of tidal stripping, the host halo mass, the halo redshift, and the halo formation time. Rather than modeling all of these effects from first principles, we subsume them in the normalization $\Sigma_{\rm{sub}}$, and impose a wide (flat) prior on this parameter between $0-0.045 \rm{kpc^{-2}}$. \citet{Gilman++18} demonstrate that the mean normalization in the lens sample effectively scales the information content available per lens; we perform the same analysis in this work, examining how the constraints on dark matter respond to different values of $\Sigma_{\rm{sub}}$. 
 
 Given a detailed model for the redshift evolution and halo mass depedence of the normalization, as well as the effects of tidal stripping, a non-flat, more informative prior could be used. Since we lack this information, and since we subsume the halo mass dependence and redshift evolution into $\Sigma_{\rm{sub}}$, we assume minimum information and use a flat prior.
-\begin{landscape}
+
 \begin{table*}
 	\centering
 	\caption[Summary of model parameters]{Parameters sampled in the forward model}
 	\label{tab:params}
+	\resizebox{\columnwidth}{!}{%
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
 		parameter & definition & prior\\
@@ -240,9 +241,9 @@ Given a detailed model for the redshift evolution and halo mass depedence of the
 		$\delta_{xy} \left[\rm{m.a.s.}\right]$ & image position uncertainties& ${\mathcal{N}}\left(0, 3\right)$\\
 		\hline		
 		
-	\end{tabular}
+	\end{tabular}}
 \end{table*}
-\end{landscape}
+
 \subsubsection{Free streaming in WDM}
 Regarding the implementation of WDM mass functions, we assume that the parameterization of the mass function turnover near $\mhm$ (Equation \ref{eqn:wdmmassfunc}) applies to both halos along the line of sight, and for subhalos in the main lens halo. As we vary the half-mode mass $\mhm$ between $10^{4.8} - 10^{10} \msun$, none of the models considered are truly `cold' in the sense of GeV-scale WIMPS with free-streaming masses of order an Earth mass. However, provided $\mhm << m_{\rm{low}} = 10^6 \msun$, the halo populations rendered result in the same observables as those in a CDM universe. \footnote{This is only true if the signal in flux ratio saturates at $m_{\rm{low}}$, otherwise we would miss part of the signal from halos with mass $<m_{\rm{low}}$. We verify that halos of mass below $10^6 \msun$ do not significantly affect the flux ratio signal for the background source sizes 25-50 pc.} We therefore interpret inferences that favor models with $\mhm <  10^6 \msun$ as consistent with CDM, even though the true half-mode mass may be in fact be much lower than the value we recover. Finally, while we implement scatter and redshift dependence in the mass concentration relation in Equation \ref{eqn:cmrelation}, we do not marginalize over the parameters describing the turnover for WDM models. 
 

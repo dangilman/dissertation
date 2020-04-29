@@ -50,11 +50,12 @@ This paper is structured as follows. Section \ref{sec:ABC} poses the problem of 
 
 \section{Bayesian inference on the subhalo mass function}
 \label{sec:ABC}
-\begin{landscape}
+%\begin{landscape}
 \begin{table*}
 	\centering
 	\caption[Summary of model parameters]{Definitions and descriptions for parameters relevant to Equation \ref{eqn:posterior3}}
 	\label{tab:notation}
+	\resizebox{\columnwidth}{!}{
 	\begin{tabular}{lccr} % four columns, alignment for each
 		\hline
 		parameter & definition & description\\
@@ -67,9 +68,9 @@ This paper is structured as follows. Section \ref{sec:ABC} poses the problem of 
 		$\qmacs$ & maximum-likelihood macromodel for $n$th lens& fits $n$th positions, time delays in presence of substructure\\ \\
 		$\fmods$ & flux ratios computed in the forward model for $n$th lens& computed with $\qmacs$ as opposed to\\ & & true mass distribution \\ \\
 		\hline		
-	\end{tabular}
+	\end{tabular}}
 \end{table*}
-\end{landscape}
+%\end{landscape}
 
 In this section we describe how we infer the parameters describing subhalo populations within a Bayesian framework, and propose an Approximate Bayesian Computing (ABC) algorithm to contend with the highly stochastic nature of substructure lensing. Section \ref{ssect:overview} derives the expression for the posterior distribution of dark matter model parameters given a set of lensing observables. In Section \ref{ssect:ABCoverview}, we briefly review the technique of Approximate Bayesian Computing.
 
